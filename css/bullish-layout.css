@@ -1,0 +1,32 @@
+#page-container {
+    position: relative;
+}
+
+#content {
+    background-color: red;
+}
+
+#center{
+    background-color: white;
+}
+
+footer {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 2.5rem;
+}
+
+.col {
+    height: 200px;
+}
+
+#search{
+    padding:70px 0;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+    padding: 40px 0
+}

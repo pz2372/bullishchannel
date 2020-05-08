@@ -1,0 +1,175 @@
+.candlehover {
+    position: absolute;
+    top: 320px;
+    left: 300px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .candlehover a {
+    display: none;
+    color: white;
+  }
+  .candlehover:hover a {
+    display: block;
+    position: relative;
+    background: #181818;
+    border-radius: .4em;
+
+  }
+
+  .bidhover {
+    position: absolute;
+    top: 625px;
+    left: 300px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .bidhover p {
+    display: none;
+    color: white;
+  }
+  .bidhover:hover p {
+    display: block;
+    position: relative;
+    background: #181818;
+    border-radius: .4em;
+  }
+
+  .askhover {
+    position: absolute;
+    top: 625px;
+    left: 700px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .askhover p {
+    display: none;
+    color: white;
+  }
+  .askhover:hover p {
+    display: block;
+    position: relative;
+    background: #181818;
+    border-radius: .4em;
+  }
+
+  .bidsizehover {
+    position: absolute;
+    top: 625px;
+    left: 440px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .bidsizehover p {
+    display: none;
+    color: white;
+  }
+  .bidsizehover:hover p {
+    display: block;
+    position: relative;
+    background: #181818;
+    border-radius: .4em;
+  }
+
+  .asksizehover {
+    position: absolute;
+    top: 625px;
+    left: 840px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .asksizehover p {
+    display: none;
+    color: white;
+  }
+  .asksizehover:hover p {
+    display: block;
+    position: relative;
+    background: #181818;
+    border-radius: .4em;
+  }
+
+  .timehover {
+    position: absolute;
+    top: 300px;
+    left: 800px;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .timehover p {
+    display: none;
+    color: white;
+  }
+  .timehover:hover p {
+    display: block;
+    position: relative;
+    background: #181818;
+    border-radius: .4em;
+  }
+
+  .tickerhover {
+    position: absolute;
+    top: 208px;
+    left: 140px;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .tickerhover p {
+    display: none;
+    color: white;
+  }
+  .tickerhover:hover p {
+    display: block;
+    position: relative;
+    background: #181818;
+    border-radius: .4em;
+  }
+
+  .volumehover {
+    position: absolute;
+    top: 450px;
+    left: 200px;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .volumehover a {
+    display: none;
+    color: white;
+  }
+  .volumehover:hover a {
+    display: block;
+    position: relative;
+    background: #181818;
+    border-radius: .4em;
+  }
+
+  .toggle {
+    height: 15px;
+    width: 15px;
+    background-color: #A52A2A;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  h2 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
+  h3 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 30px;
+  }
+
+  p {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px
+  }
