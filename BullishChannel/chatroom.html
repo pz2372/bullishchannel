@@ -3,51 +3,61 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
         <link rel="stylesheet" href="css/chatroom.css" type="text/css">
+        <link rel="stylesheet" href="css/uniform.css" type="text/css">
         <meta name="description" content="Learn How To Start and Grow as a Trader">
         <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
         <meta name="author" content="Zheng">
         <meta http-equiv="refresh" content="60">
-        
     </head>
 
-    <header>
+    <body>
+        <header class="header">
             <div> 
                 <h1 style="font-family: Optima; color: #465d2c; padding-top: 15px; padding-left: 15px;" class="title is-1">The Bullish Channel</h1> 
-            </div>  
-        
-            <div style="border-bottom:1px solid #CCC; float:left; width:100%; padding-bottom:3px; padding-left: 11px;" class="navbar-menu">
-                <div style="font-family: DejaVu Sans Mono;" class="navbar-start">
-                            <a class="navbar-item" href="index.html">Main Page</a>
-                            <a class="navbar-item" href="education.html">Basic Information</a>
-                            <a class="navbar-item" href="trading-terms.html">Trading Terms</a>
-                            <a class="navbar-item" href="patterns.html">Patterns</a>
-                            <a class="navbar-item" href="technicals.html">Technical Analysis</a>
-    
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link">Community</a>
-                                <div class="navbar-dropdown">
-                                        <a class="navbar-item" href="chatroom.html">Chatroom</a>
-                                        <a class="navbar-item" href="technicals.html">Stock Screener</a>
-                                </div>
-                            </div> 
-                </div> 
-    
-                <div class="navbar-end">
-                        <div class="navbar-item">
-                          <div class="buttons">
-                            <a style="font-family: DejaVu Sans Mono; border-color:#465d2c" class="button is-small is-focused" href="signup.html">Sign up</a>
-                            <a style="font-family: DejaVu Sans Mono; border-color:#465d2c" class="button is-small is-focused" href="login.html">Log in</a>
-                          </div>
-                        </div>
+            </div> 
+
+            <div class="navbar navbar-expand-sm navbar-dark bg-dark mb-4" role="navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li class="dropdown-item"><a class="nav-link"  href="education.html">Education</a></li>
+                                <li class="dropdown-item"><a class="nav-link"  href="patterns.html">Patterns</a></li>
+                                <li class="dropdown-item"><a class="nav-link"  href="technicals.html">Technicals</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trade Records</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="chatroom.html">Chatroom</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.html">Signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>
-
-    <body>
+        
         <h1 style="text-align: center; font-size: 40px; font-family: DejaVu Sans Mono; margin: 50px 0px 20px 0px;">Channel Chatroom</h1>
         <div class="messages" style="height: 300px;"></div>
 
