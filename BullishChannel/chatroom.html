@@ -7,7 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
         <link rel="stylesheet" href="css/chatroom.css" type="text/css">
         <link rel="stylesheet" href="css/uniform.css" type="text/css">
         <meta name="description" content="Learn How To Start and Grow as a Trader">
@@ -22,14 +22,14 @@
                 <h1 style="font-family: Optima; color: #465d2c; padding-top: 15px; padding-left: 15px;" class="title is-1">The Bullish Channel</h1> 
             </div> 
 
-            <div class="navbar navbar-expand-sm navbar-dark bg-dark mb-4" role="navigation">
+            <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation" id="nav">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
@@ -43,7 +43,10 @@
                             <a class="nav-link" href="#">Trade Records</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="chatroom.html">Chatroom</a>
+                            <a class="nav-link active" href="chatroom.html">Chatroom</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -58,13 +61,22 @@
             </div>
         </header>
         
-        <h1 style="text-align: center; font-size: 40px; font-family: DejaVu Sans Mono; margin: 50px 0px 20px 0px;">Channel Chatroom</h1>
-        <div class="messages" style="height: 300px;"></div>
-
-        <form class="message-form" onsubmit="return false;">
-          <input class="message-form__input" placeholder="Type a message" type="text"/>
-          <input class="message-form__button" value="Send" type="submit"/>
-        </form>
+        <div class="container rounded" id="chat">
+            <div class="row">
+                <div class="col-8">
+                    <div class="messages"></div>
+                    <form class="message-form" onsubmit="return false;">
+                        <input class="message-form__input form-control" placeholder="Type a message.." type="text"/>
+                        <button type="submit" class="btn btn-outline-success">Send</button>
+                        
+                    </form>
+                </div>
+                <div class="col-4">
+                    <div class="members-count">-</div>
+                    <div class="members-list">-</div>
+                </div>
+            </div>
+        </div>
 
         <script src="./script/chatroom.js"></script>
     </body>
