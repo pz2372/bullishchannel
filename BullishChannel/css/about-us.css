@@ -1,0 +1,64 @@
+#main-color {
+    /* background-color: #333; */
+    width: 100%;
+  }
+  
+  #main {
+    text-align: center;
+    padding: 200px;
+    font-size: 100px;
+    font-weight: 900px;
+    letter-spacing: 20px;
+    background-size: cover;
+    background-image: url("../images/swimbear.jpg");
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .row-one {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    position: relative;
+  }
+  
+  .column-one {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .column-two {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .column-three {
+    flex: 1;
+    text-align: center;
+  }
+  
+  #person-one:hover {
+    cursor: pointer;
+  }
+  /* .column-one:visited {
+    background-color: red;
+  } */
+  
+  #person-two:hover {
+    cursor: pointer;
+  }
+  
+  #person-three:hover {
+    cursor: pointer;
+  }
+  
+  #person-one-name {
+    text-align: center;
+    margin: 100px;
+    padding-top: 30px;
+  }
+  
+  #person-info {
+    margin: 100px;
+  }
+  

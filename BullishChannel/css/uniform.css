@@ -34,7 +34,15 @@
   display: block;
 }
 
-/* footer {
+.logged-out{
+  display: none;
+}
+
+.logged-in{
+  display: none;
+}
+
+ footer {
     background-color: #003333; 
     width: 100%;
     height: 230px;
@@ -126,4 +134,4 @@
   .github:hover{
     background-color:#6CC644;
   }
-  */
+  

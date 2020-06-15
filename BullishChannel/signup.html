@@ -7,7 +7,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script> 
         <link rel="stylesheet" href="css/login.css" type="text/css">
         <link rel="stylesheet" href="css/uniform.css" type="text/css">
         <meta name="description" content="Learn How To Start and Grow as a Trader">
@@ -67,7 +70,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center form_container">
-                        <form>
+                        <form id="signup-form">
                             <div class="form-row">
                                 <div class="form group col-md-6 mb-2">                     
                                     <input type="text" name="" class="form-control" value="" placeholder="First Name">
@@ -80,13 +83,13 @@
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" name="" class="form-control input_user" value="" placeholder="Email Address">
+                                <input type="text" id="email" class="form-control input_user" value="" placeholder="Email Address">
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="text" name="" class="form-control input_pass" value="" placeholder="Password">
+                                <input type="text" id="password" class="form-control input_pass" value="" placeholder="Password">
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-append">
@@ -95,7 +98,7 @@
                                 <input type="text" name="" class="form-control input_pass" value="" placeholder="Confirm Password">
                             </div>
                             <div class="d-flex justify-content-center mt-3 login_container">
-                                <button type="button" name="button" class="btn login_btn">Sign Up</button>
+                                <button type="submit" id="signup" name="button" class="btn login_btn">Sign Up</button>
                             </div>
                         </form>
                     </div>
@@ -137,7 +140,8 @@
                     </div>
                   </div>
             </div>
-        </footer>
+        </footer>   
+        <script src="script/signup.js"></script>
     </body>
     
 </html>

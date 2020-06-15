@@ -7,7 +7,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>   
         <link rel="stylesheet" href="css/bullish-layout.css" type="text/css">
         <link rel="stylesheet" href="css/uniform.css" type="text/css">
         <meta name="description" content="Learn How To Start and Grow as a Trader">
@@ -22,43 +25,48 @@
                 <h1>The Bullish Channel</h1> 
             </div> 
 
-            <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation" id="nav">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                <a class="nav navbar-left" href="#"><img src="images/imag.jpg" height="40px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
+            
+                <div class="navbar-collapse collapse  justify-content-between align-items-center w-100" id="collapsingNavbar2">
+                    <ul class="navbar-nav mx-auto text-center">
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Education</a>
-                              <div class="dropdown-content">
-                                <a href="#">Basic Information</a>
-                                <a href="#">Patterns</a>
-                                <a href="#">Technical Analysis</a>
-                              </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trade Records</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="chatroom.html">Chatroom</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
+                                    <a class="nav-link" href="#">Education</a>
+                                      <div class="dropdown-content">
+                                        <a href="#">Basic Information</a>
+                                        <a href="#">Patterns</a>
+                                        <a href="#">Technical Analysis</a>
+                                      </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Trade Records</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="chatroom.html">Chatroom</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About Us</a>
+                                </li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
+                    <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                        <li class="nav-item logged-out">
                             <a class="nav-link" href="signup.html">Signup</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item logged-out">
                             <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item logged-in">
+                            <a class="nav-link" id="sign-out" type="click">Sign Out</a>
                         </li>
                     </ul>
                 </div>
-            </div>
+            </nav>
         </header>
     
         <div id="page-container">
@@ -75,17 +83,17 @@
                     <div id="center-info" class="container">
                         <div class="row">
                             <div class="col">
-                                <img src="images/pengu.jpg">
+                                <img class="home-img" src="images/pengu.jpg">
                                 <h4>Build on your foundation</h4>
                                 <p>Explore the FREE Education page and touch up on information. Our traders accumulated 4 years of knowlege.</p>
                             </div>
                             <div class="col">
-                                <img src="images/pengu.jpg">
+                                <img class="home-img" src="images/pengu.jpg">
                                 <h4>Learn From The Community</h4>
                                 <p>Penis</p>
                             </div>
                             <div class="col">
-                                <img src="images/pengu.jpg">
+                                <img class="home-img" src="images/pengu.jpg">
                                 <h4>Grow Your Account</h4>
                                 <p>Penis</p>
                             </div>
@@ -136,5 +144,6 @@
                       </div>
                 </div>
             </footer>
+        <script src="script/core.js"></script>
     </body>
 </html>
