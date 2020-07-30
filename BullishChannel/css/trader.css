@@ -1,0 +1,106 @@
+#main-title {
+  text-align: center;
+  padding: 150px;
+  font-size: 100px;
+  font-weight: 900px;
+  letter-spacing: 20px;
+  background-size: cover;
+  background-image: url("../images/dark.jpeg");
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.row-one {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  position: relative;
+}
+
+.column-one {
+  flex: 1;
+  text-align: center;
+}
+
+#person-one:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+#person-two:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+#person-three:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+#person-one-name {
+  text-align: center;
+  font-size: 50px;
+  margin: 100px 0px 40px 0px;
+}
+
+#person-info {
+  margin: 40px 100px 100px 100px;
+  text-indent: 50px;
+}
+
+#challenge {
+  text-align: center;
+  font-size: 40px;
+  margin: 35px;
+}
+
+#account {
+  text-align: center;
+  margin: 35px;
+}
+
+.card {
+margin-bottom: 100px;
+overflow: auto;
+}
+
+.card-header {
+  text-align: center;
+  width: 100%;
+}
+
+#calendar {
+  margin-bottom: 0px;
+}
+
+td {
+  width: 10vw;
+  height: 10vh;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.green {
+  background-color: rgb(4, 218, 4);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.red {
+  background-color: rgb(255, 59, 59);
+  text-align: center;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  #main-title {
+    padding: 10vh 0 10vh 0;
+    font-size: 14vw;
+    letter-spacing: 1vw;
+  }
+
+  #person-info {
+    margin: 40px 8vw 100px 8vw;
+  }
+}
+

@@ -1,0 +1,74 @@
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.head {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#main-title {
+    text-align: center;
+    padding: 150px;
+    font-size: 100px;
+    font-weight: 900px;
+    letter-spacing: 20px;
+    background-size: cover;
+    background-image: url("../images/swimbear.jpg");
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.forma {
+    padding-top: 150px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid #0e9b25;
+    box-shadow: none;
+    border-color: none;
+}
+
+#inputMessage {
+    width: 100%;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid #0e9b25;
+    box-shadow: none;
+    border-color: none;
+    margin-top: 60px;
+}
+
+::placeholder { 
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+
+::-ms-input-placeholder {
+    color: black;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 700px) {
+    #main-title {
+      padding: 10vh 0 10vh 0;
+      font-size: 14vw;
+      letter-spacing: 1vw;
+    }
+}

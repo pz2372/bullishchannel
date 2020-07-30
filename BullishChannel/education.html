@@ -1,246 +1,301 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <link rel="stylesheet" href="css/education.css" type="text/css">
-        <link rel="stylesheet" href="css/uniform.css" type="text/css">
-        <meta name="description" content="Learn How To Start and Grow as a Trader">
-        <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
-        <meta name="author" content="Zheng">
-        <meta http-equiv="refresh" content="60">
-    </head>
 
-    <body>
-        <div>
-            <header class="header">
-                <div> 
-                    <h1 style="font-family: Optima; color: #465d2c; padding-top: 15px; padding-left: 15px;" class="title is-1">The Bullish Channel</h1> 
-                </div> 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/education.css" type="text/css" />
+    <link rel="stylesheet" href="css/uniform.css" type="text/css">
+    <meta name="description" content="Learn How To Start and Grow as a Trader" />
+    <meta name="keywords" content="stocks, day, swing, trade, learn, candles" />
+    <meta name="author" content="Zheng" />
+    <meta http-equiv="refresh" content="300"/>
+</head>
 
-                <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation" id="nav">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle active" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
-                                <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                                    <li class="dropdown-item"><a class="nav-link"  href="education.html">Basic Information</a></li>
-                                    <li class="dropdown-item"><a class="nav-link"  href="patterns.html">Patterns</a></li>
-                                    <li class="dropdown-item"><a class="nav-link"  href="technicals.html">Technicals</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Trade Records</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="chatroom.html">Chatroom</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item">
-                                <a class="nav-link" href="signup.html">Signup</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.html">Login</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-
-        <div class="row container-fluid">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Candles</h5>
-                    <p>
-                        The most widely used form of of expressing and understanding the market is through a 
-                        candlestick chart. A candle is able to show a lot of imformation through a few lines and 
-                        a color. The candle is composed of a candle body and upper and lower wicks. The top of the "top wick" is the 
-                        highest price and the "bottom wick" is the lowest price that the stock reached within a time frame.
-                        Each candle can be set to different time frames ranging from 1 minute to 1 month.
-                        Every trader uses different time frames based on their preferences and experiences.
-                        The color of the candle determines the opening and closing price of the stock:
-
-                    </p><p>  
-                        A green candle means that the opening price
-                        is the bottom of the body and the closing price is the top of the body. 
-                        
-                    </p><p>      
-                        A red candle means that the opening price
-                        is the top of the body and the closing price is the bottom of the body. 
-                    
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+            <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+                            <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+                            <a class="dropdown-item" href="patterns.html">Patterns</a>
+                            <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="watchlist.html">Watchlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trader.html">Traders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="signup.html">Signup</a>
+                    </li>
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item logged-in">
+                        <a class="nav-link" id="sign-out" type="click">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="education">
+        <h1 id="main-title">EDUCATION</h1>
+    <ul class="tilesWrap container">
+        <li>
+            <div class="row">
+                <div class="col" id="col-one">
+                    <h4>
+                        BASIC INFO
+                    </h4>
+                    <p class="person-info">
+                        Immerse into the Stock Market and learn terms that ALL trader
+                        ought to know. This will serve as the foundation to further
+                        successes in your trading career!
                     </p>
+                    <button><a href="basic-info.html"> Learn </a></button>
                 </div>
-              </div>
+                <div class="col" id="col-two">
+                    <img class="graph" src="images/icon3.jpeg" style="width: 250px; height: 200px;" />
+                </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Volume</h5>
-                        <p class="card-text">The volume is the total amount of shares traded within a specific time frame. It is
+        </li>
+        <li>
+            <div class="row">
+                <div class="col" id="col-one">
+                    <h4>
+                        TRADING TERMS
+                    </h4>
+                    <p class="person-info">
+                        Learn the most commonly used terms especially for day-traders and
+                        swing-traders– Advance your knowledge of both techncial analysis
+                        and fundamental analysis alike!
+                    </p>
+                    <button><a href="trading-terms.html"> Learn </a></button>
+                </div>
+                <div class="col" id="col-two">
+                    <img class="graph" src="images/icon1.jpeg" style="width: 250px; height: 200px;" />
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col" id="col-one">
+                    <h4>
+                        PATTERNS
+                    </h4>
+                    <p class="person-info">
+                        Dive into the world of technical analysis and learn how to respond
+                        to the most popular candlestick patterns!
+                    </p>
+                    <button><a href="patterns.html"> Learn </a></button>
+                </div>
+                <div class="col" id="col-two">
+                    <img class="graph" src="images/icon6.jpeg" style="width: 250px; height: 200px;" />
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col" id="col-one">
+                    <h4>
+                        TECHNICAL INDICATORS
+                    </h4>
+                    <p class="person-info">
+                        Advance your knowledge in technical analysis with the use of
+                        popular mathematical indicators. Learn how to utilize these
+                        indicators from signals of trend changes to signals of buying and
+                        selling!
+                    </p>
+                    <button><a href="technicals.html"> Learn </a></button>
+                </div>
+                <div class="col" id="col-two">
+                    <img class="graph" src="images/icon7.jpeg" style="width: 250px; height: 200px;" />
+                </div>
+            </div>
+        </li>
+        <h2 id="premium-title">Premium Contents</h2>
+        <div id="blur">
+        <li class="premium-content">
+            <div class="row">
+                <div class="col" id="col-one">
+                    <h4>
+                        Premium
+                    </h4>
+                    <p class="person-info">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s.
+                    </p>
+                    <button><a href="about.html"> Read more </a></button>
+                </div>
+                <div class="col" id="col-two">
+                    <img class="graph" src="images/bear.jpg" style="width: 200px; height: 200px;" />
+                </div>
+            </div>
+        </li>
+            <li class="premium-content">
+                <div class="row">
+                    <div class="col" id="col-one">
+                        <h4>
+                            <img id="person-one" src="images/bears.jpg" alt="Avatar"
+                                style="width: 100px; height: 100px; border-radius: 50%;" />
+                        </h4>
+                        <p class="person-info">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s.
                         </p>
+                        <button><a href="about.html"> Read more </a></button>
+                    </div>
+                    <div class="col" id="col-two">
+                        <img class="graph" src="images/bear.jpg" style="width: 200px; height: 200px;" />
                     </div>
                 </div>
-            </div>
+            </li>
+            <li class="premium-content">
+                <div class="row">
+                    <div class="col" id="col-one">
+                        <h4>
+                            <img id="person-one" src="images/bears.jpg" alt="Avatar"
+                                style="width: 100px; height: 100px; border-radius: 50%;" />
+                        </h4>
+                        <p class="person-info">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s.
+                        </p>
+                        <button><a href="about.html"> Read more </a></button>
+                    </div>
+                    <div class="col" id="col-two">
+                        <img class="graph" src="images/bear.jpg" style="width: 200px; height: 200px;" />
+                    </div>
+                </div>
+            </li>
+            <li class="premium-content">
+                <div class="row">
+                    <div class="col" id="col-one">
+                        <h4 id="img">
+                            <img id="person-one" src="images/bears.jpg" alt="Avatar"
+                                style="width: 100px; height: 100px; border-radius: 50%;" />
+                        </h4>
+                        <p class="person-info">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s.
+                        </p>
+                        <button><a href="about.html"> Read more </a></button>
+                    </div>
+                    <div class="col" id="col-two">
+                        <img class="graph" src="images/bear.jpg" style="width: 200px; height: 200px;" />
+                    </div>
+                </div>
+            </li>
+            <li class="premium-content">
+                <div class="row">
+                    <div class="col" id="col-one">
+                        <h4 id="img">
+                            <img id="person-one" src="images/bears.jpg" alt="Avatar"
+                                style="width: 100px; height: 100px; border-radius: 50%;" />
+                        </h4>
+                        <p class="person-info">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s.
+                        </p>
+                        <button><a href="about.html"> Read more </a></button>
+                    </div>
+                    <div class="col" id="col-two">
+                        <img class="graph" src="images/bear.jpg" style="width: 200px; height: 200px;" />
+                    </div>
+                </div>
+            </li>
+            <li class="premium-content">
+                <div class="row">
+                    <div class="col" id="col-one">
+                        <h4 id="img">
+                            <img id="person-one" src="images/bears.jpg" alt="Avatar"
+                                style="width: 100px; height: 100px; border-radius: 50%;" />
+                        </h4>
+                        <p class="person-info">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s.
+                        </p>
+                        <button><a href="about.html"> Read more </a></button>
+                    </div>
+                    <div class="col" id="col-two">
+                        <img class="graph" src="images/bear.jpg" style="width: 200px; height: 200px;" />
+                    </div>
+                </div>
+            </li>
+            <li class="premium-content">
+                <div class="row">
+                    <div class="col" id="col-one">
+                        <h4 id="img">
+                            <img id="person-one" src="images/bears.jpg" alt="Avatar"
+                                style="width: 100px; height: 100px; border-radius: 50%;" />
+                        </h4>
+                        <p class="person-info">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s.
+                        </p>
+                        <button><a href="about.html"> Read more </a></button>
+                    </div>
+                    <div class="col" id="col-two">
+                        <img class="graph" src="images/bear.jpg" style="width: 200px; height: 200px;" />
+                    </div>
+                </div>
+            </li>
         </div>
-        <br>
+    </ul>
+</div>
 
-        <div class="row container-fluid">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Support</h5>
-                        <p>
-                            Support is, in essence, a price area where large amounts of buyers come in the market.  
-                            If the price action bounces off the support area, the stock is considered bullish. If
-                            the price action breaks through the support area, the stock is considered bearish.
-                        </p>
-                    </div>
+    <div class="flex-row">
+        <footer class="footer">
+            <div>
+                <div>
+                    <img src="images/bull.png" height="100px"/>
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Resistance</h5>
-                        <p>
-                            Resistance is, in essence, a price area where sellers come in the market. 
-                            If the price action breaks through the resistance area, the stock is considered bullish.
-                            If the price action gets rejected at the resistance area, the stock is considered bearish.
-                        </p>
+                    <div class="row footer-link">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="education.html">Education</a></li>
+                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="terms-condition.html">Terms and Conditions</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                            </ul>
                     </div>
-                </div>
             </div>
-        </div>
-        <br>
-
-        <div class="row container-fluid">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Order Types</h5>
-                        <p>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Market Orders</h5>
-                        <p>
-                            Leverage of speed and filling the user’s buy order.  The user risk paying a higher price than intended.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-
-        <div class="row container-fluid">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Limit Orders</h5>
-                        <p>
-                            Leverage of buying AT the price the user wants.  The user risk not having their order filled as the stock
-                            make higher moves.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Stop Loss</h5>
-                        <p>
-                            Stop-loss is a more-advanced sell order type that triggers when the stock reach below the price specified by the user.  Once the 
-                            stop-loss triggers, the order automatically change into a “market sell” order that will trigger immediately.  
-                            Stop-loss goes beyond than just an order type.  Stop-loss is a method of managing risk to protect one’s capital.  
-                            It is generally advised to have a stop-loss plan before acquiring position in a stock.  
-                            There are two ways to set up a stop-loss order:  manually and mentally.  Manual stop-loss is the process 
-                            of using the brokerage to set up the order type with the specified price for the stop-loss to trigger.  Mental stop-loss 
-                            is the process of watching the market to identify when price goes below the specified price and then use the “market sell” order type.
-                            The conflict with this order type is the user’s emotions and ego.  With the greater emotions and ego while trading, it blinds the user to not set the 
-                            stop-loss.  This could result in some unforeseen losses.                          
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> 
-        </div>
-        <br>
-
-        <div class="row container-fluid">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Stop Market</h5>
-                        <p>
-                            Leverage of buying AT the price the user wants.  The user risk not having their order filled as the stock
-                            make higher moves.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Stop Limit</h5>
-                        <p>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-
-        <div class="row container-fluid">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Trailing Stop Loss</h5>
-                        <p>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Trailing Stop Limit</h5>
-                        <p>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-
-        </body>
-        </div>
-
-        <footer class="footer" style="background: #E8E8E8;">
-            <form>
-            <div class="search" style=" background: #465d2c; height: 80px; border-radius: 40px; padding-left: 40%">
-                <input class="search-text" type="text" placeholder="Type to Search" style="border-radius: 40px; float: left; outline: none; background-color: white; color: black; font-size: 16px; font-family: arial; line-height: 40px; margin-top:17px;">
-                <a class="search-button" href="#" style=" width: 45px; height: 45px; border-radius: 50%; display: flex;"><img style="border-radius: 50%;" src="images/search.jpg"/></a>
-            </div>
-            </form>
-        </footer>
+            &copy;2020 The Bullish Channel
+        </footer>            
+    </div>
+</body>
 
 </html>

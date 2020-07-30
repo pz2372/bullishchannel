@@ -16,49 +16,54 @@
         <meta name="description" content="Learn How To Start and Grow as a Trader">
         <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
         <meta name="author" content="Zheng">
-        <meta http-equiv="refresh" content="60">
+        <meta http-equiv="refresh" content="300">
     </head>
 
     <body> 
         <header class="header">
-            <div> 
-                <h1 style="font-family: Optima; color: #465d2c; padding-top: 15px; padding-left: 15px;" class="title is-1">The Bullish Channel</h1> 
-            </div> 
-
-            <div class="navbar navbar-expand-sm navbar-dark bg-dark mb-4" role="navigation">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+                <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse"
+                    data-target="#collapsingNavbar2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+                    <ul class="navbar-nav mx-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                                <li class="dropdown-item"><a class="nav-link"  href="education.html">Education</a></li>
-                                <li class="dropdown-item"><a class="nav-link"  href="patterns.html">Patterns</a></li>
-                                <li class="dropdown-item"><a class="nav-link"  href="technicals.html">Technicals</a></li>
-                            </ul>
+                            <a class="nav-link" href="education.html">Education</a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+                                <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+                                <a class="dropdown-item" href="patterns.html">Patterns</a>
+                                <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Trade Records</a>
+                            <a class="nav-link" href="watchlist.html">Watchlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="chatroom.html">Chatroom</a>
+                            <a class="nav-link" href="trader.html">Traders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html">About Us</a>
                         </li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
+                    <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                        <li class="nav-item logged-out">
                             <a class="nav-link" href="signup.html">Signup</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item logged-out">
                             <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item logged-in">
+                            <a class="nav-link" id="sign-out" type="click">Sign Out</a>
                         </li>
                     </ul>
                 </div>
-            </div>
+            </nav>
         </header>
 
         <div class="container h-100" id="site">
@@ -73,29 +78,29 @@
                         <form id="signup-form">
                             <div class="form-row">
                                 <div class="form group col-md-6 mb-2">                     
-                                    <input type="text" name="" class="form-control" value="" placeholder="First Name">
+                                    <input type="text" name="" class="form-control" value="" placeholder="First Name" required>
                                 </div>
                                 <div class="form group col-md-6 mb-2">                     
-                                    <input type="text" name="" class="form-control" value="" placeholder="Last Name">
+                                    <input type="text" name="" class="form-control" value="" placeholder="Last Name" required>
                                 </div>
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" id="email" class="form-control input_user" value="" placeholder="Email Address">
+                                <input type="text" id="email" class="form-control input_user" value="" placeholder="Email Address" required>
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="text" id="password" class="form-control input_pass" value="" placeholder="Password">
+                                <input type="text" id="password" class="form-control input_pass" value="" placeholder="Password" required>
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="text" name="" class="form-control input_pass" value="" placeholder="Confirm Password">
+                                <input type="text" name="" class="form-control input_pass" value="" placeholder="Confirm Password" required>
                             </div>
                             <div class="d-flex justify-content-center mt-3 login_container">
                                 <button type="submit" id="signup" name="button" class="btn login_btn">Sign Up</button>

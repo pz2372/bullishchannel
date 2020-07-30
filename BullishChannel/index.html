@@ -1,149 +1,351 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>   
-        <link rel="stylesheet" href="css/bullish-layout.css" type="text/css">
-        <link rel="stylesheet" href="css/uniform.css" type="text/css">
-        <meta name="description" content="Learn How To Start and Grow as a Trader">
-        <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
-        <meta name="author" content="Zheng">
-        <meta http-equiv="refresh" content="60">
-    </head>
 
-    <body>
-        <header class="header">
-            <div> 
-                <h1>The Bullish Channel</h1> 
-            </div> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+    <script data-ad-client="ca-pub-9681944883640532" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="stylesheet" href="css/bullish-layout.css" type="text/css">
+    <link rel="stylesheet" href="css/uniform.css" type="text/css">
+    <meta name="description" content="Learn How To Start and Grow as a Trader">
+    <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
+    <meta http-equiv="refresh" content="300">
+</head>
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-                <a class="nav navbar-left" href="#"><img src="images/imag.jpg" height="40px"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            
-                <div class="navbar-collapse collapse  justify-content-between align-items-center w-100" id="collapsingNavbar2">
-                    <ul class="navbar-nav mx-auto text-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">Education</a>
-                                      <div class="dropdown-content">
-                                        <a href="#">Basic Information</a>
-                                        <a href="#">Patterns</a>
-                                        <a href="#">Technical Analysis</a>
-                                      </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Trade Records</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="chatroom.html">Chatroom</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About Us</a>
-                                </li>
-                    </ul>
-                    <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
-                        <li class="nav-item logged-out">
-                            <a class="nav-link" href="signup.html">Signup</a>
-                        </li>
-                        <li class="nav-item logged-out">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                        <li class="nav-item logged-in">
-                            <a class="nav-link" id="sign-out" type="click">Sign Out</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    
-        <div id="page-container">
-            <div id="image">
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+            <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+                            <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+                            <a class="dropdown-item" href="patterns.html">Patterns</a>
+                            <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="watchlist.html">Watchlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trader.html">Traders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="signup.html">Signup</a>
+                    </li>
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item logged-in">
+                        <a class="nav-link" id="sign-out" type="click">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div>
+        <div id="parallax"></div>
+        <div class="flex-column">
+            <div id="image container">
                 <div id="image-content">
-                    <h1 id="image-text">Become A Better Trader Than You Were Before</h1>
-                    <button class="btn btn-success" href="chatroom.html">Join Chatroom</button>
+                    <h1 id="image-text">The Bullish Channel</h1>
+                    <h3 id="image-sub">Become Financially Free</h3>
                 </div>
             </div>
-
-            <div id="content">
-                <div id="center" class="container">   
-                    <h2>Use our site to become an experienced trader!</h2>
-                    <div id="center-info" class="container">
-                        <div class="row">
-                            <div class="col">
-                                <img class="home-img" src="images/pengu.jpg">
-                                <h4>Build on your foundation</h4>
-                                <p>Explore the FREE Education page and touch up on information. Our traders accumulated 4 years of knowlege.</p>
-                            </div>
-                            <div class="col">
-                                <img class="home-img" src="images/pengu.jpg">
-                                <h4>Learn From The Community</h4>
-                                <p>Penis</p>
-                            </div>
-                            <div class="col">
-                                <img class="home-img" src="images/pengu.jpg">
-                                <h4>Grow Your Account</h4>
-                                <p>Penis</p>
-                            </div>
+            <div class="flex-row first-section">
+                <h2>Become A Better Trader Together</h2>
+                <div class="container center-info">
+                    <div class="row foundation">
+                        <div class="col">
+                            <img class="home-img" src="images/book.png">
+                            <h4>Build The Foundation</h4>
+                            <p>Explore the Education page and touch up on information. Our traders have accumulated over
+                                4 years of experience so you won't have to make the same mistakes</p>
+                        </div>
+                        <div class="col">
+                            <img class="home-img" src="images/chat.png">
+                            <h4>Learn From The Community</h4>
+                            <p>Join our chatroom and chat with our traders. We want to help all the new traders become
+                                better traders in the market.</p>
+                        </div>
+                        <div class="col">
+                            <img class="home-img" src="images/grow.png">
+                            <h4>Grow Your Account</h4>
+                            <p>Having access to our watchlist combined with your self-made strategy, grow your account
+                                at a constant rate after mastering your inner self.</p>
                         </div>
                     </div>
 
-                    <div class="container" id="second-section">
-                        <img id="binary-image" src="images/binary.jpg">
-                        <h2 style="padding-top: 50px;">Options Trading</h2>
-                        <p>fbkjfdbfdbfbjfdbjk</p>
-                    </div>
+                    <hr />
 
-                    <div class="container" id="third-section">
-                        <h1>Join Us Now</h1>
-                        <p>dsuiewhuiheuhewhuhdeoiio</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        
-            <footer class="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div>
-                                <h1 id="logo">Bullish Channel</h1>
-                                <input id="search" class="form-control" type="text" placeholder="Search" aria-label="Search">
-                                <div class="wrap">
-                                    <div class="facebook icon"><a href="https://www.facebook.com" target="_blank"></a></div>
-                                    <div class="twitter icon"><a href="https://www.twitter.com" target="_blank"></a></div>
-                                    <div class="instagram icon"><a href="http://www.instagram.com" target="_blank"></a></div>
-                                    <div class="github icon"><a href="https://www.github.com" target="_blank"></a></div>
+                    <div class="row subscription">
+                        <div class="col red">
+                            <div class="sub-box">
+                                <h2>Subscription Package Coming Soon</h2>
+                                <p>Sign up today to recieve an email when our package is released</p>
+                                <a href="#" class="nav-link" type="click" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Add me to waitlist today!</a>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Be the first to get our
+                                                    premium content!</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" for="inputName">Name:</label>
+                                                        <input type="text" class="form-control" id="inputName">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" for="inputEmail">Email:</label>
+                                                        <input type="text" class="form-control" id="inputEmail">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    onclick="submitContactForm()">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col sub-list">
+                            <h4>Includes:</h1>
+                                <ul>
+                                    <li>Community Chatroom</li>
+                                    <li>TBC Watchlist</li>
+                                    <li>Our Strategies</li>
+                                    <li>Trading Feedback</li>
+                                    <li>Premium Education</li>
+                                </ul>
                         </div>
-                        <div class="col">
-                            <ul id="footer-list">
-                                <li>Home</li>
-                                <li>Chatroom</li>
-                                <li>FAQ</li>
-                                <li>Terms and Conditions</li>
-                                <li>About Us</li>
-                            </ul>
-                        </div>
-                      </div>
+
+                    </div>
+
+
                 </div>
-            </footer>
-        <script src="script/core.js"></script>
-    </body>
+
+            </div>
+
+            <div class="flex-row">
+                <div id="parallax-two">
+                    <div class="winner container">
+                        <h2>WINNER OF THE WEEK</h2>
+                        <h1 id="winner-symbol"></h1>
+                        <h3 id="winner-percent"></h3>
+                        <a href="watchlist.html">Don't miss out on next week's call!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-row second-section">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <blockquote class="speech-bubble">
+                                <div>
+                                    <p>"The watchlists are amazing everyday. Y'all provided me with skills to make my
+                                        own trades instead of depending on other people for entries and exits. That's
+                                        what separates this site from other chatrooms"</p>
+                                </div>
+                            </blockquote>
+                            <small>Jacky</small>
+                        </div>
+                        <div class="carousel-item">
+                            <blockquote class="speech-bubble">
+                                <div>
+                                    <p>"I've only been trading for a couple months and I was SO lost at the beginning.
+                                        Thank you for pointing me in the right direction"</p>
+                                </div>
+                            </blockquote>
+                            <small>Jannette</small>
+                        </div>
+                        <div class="carousel-item">
+                            <blockquote class="speech-bubble">
+                                <div>
+                                    <p>"I work a full time job so I do not have time to day trade. The Bullish Channel
+                                        has provided me swings with great returns to my small account."</p>
+                                </div>
+                            </blockquote>
+                            <small>Michael</small>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex-row third-section row">
+                <div class="column">
+                    <div class="image-container">
+                        <a href="#"><img class="square-image" src="images/icon1.jpeg"></a>
+                        <a class="text-block" href="contact-us.html">Join The Team</a>
+                    </div>
+                    <div class="image-container">
+                        <a href="#"><img class="square-image" src="images/icon2.jpeg"></a>
+                        <a class="text-block" href="watchlist.html">Watchlist</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-container">
+                        <a href="#"><img class="square-image" src="images/icon4.jpeg"></a>
+                        <a class="text-block" href="trader.html">Performance</a>
+                    </div>
+                    <div class="image-container">
+                        <a href="#"><img class="square-image" src="images/icon5.jpeg"></a>
+                        <a class="text-block" href="trader.html">Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/core.js"></script>
+    <script src="script/index.js"></script>
+
+
+    <div class="flex-row">
+        <footer class="footer">
+            <div>
+                <div>
+                    <img src="images/bull.png" height="100px" />
+                </div>
+                <div class="row footer-link">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-condition.html">Terms and Conditions</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr />
+            <div id="disclaimer">
+                <p>
+                    The Site is intended solely for Users who are eighteen (18) years of age or older. Any registration
+                    by, use of or access to the Site by anyone under 18 is unauthorized, unlicensed and in violation of
+                    these Terms of Use. By using the Site, you represent and warrant that you are 18 or older, and that
+                    you agree to and to abide by all of the terms and conditions of these Terms of Use.
+                </p>
+                <p>
+                    If you do not agree with any term of provision of our Terms and Conditions you should not use our
+                    Site, Services, Content or Information. Please be advised that your continued use of the Site,
+                    Services, Content, or Information provided shall indicate your consent and agreement to our Terms
+                    and Conditions.
+                </p>
+                <p>
+                    You understand that The Bullish Channel does not control, and is not responsible for, content
+                    created and posted to the Site by Users (“User-Generated Content” or “UGC”) posted on or through the
+                    Site. Under no circumstances will we be liable in any way for any User-Generated Content.
+                </p>
+                <p>
+                    This means that you, not The Bullish Channel, are entirely responsible for all UGC that you post and
+                    that you can be held personally liable for comments that are defamatory, obscene, or libelous, or
+                    that violate these Terms of Use, an obligation of confidentiality, or the rights of others. If any
+                    part of the UGC you post is not your original work, it is your responsibility to obtain any
+                    necessary permission to post it.
+                </p>
+                <p>
+                    Because we do not control the UGC posted on or through this Site, we cannot and do not warrant or
+                    guarantee the truthfulness, integrity, suitability, or quality of that UGC. You also agree and
+                    understand that by accessing this Site, you may encounter UGC that you may consider to be
+                    objectionable. We have no responsibility for any UGC, including without limitation any errors or
+                    omissions therein. We are not liable for any loss or damage of any kind you may claim was incurred
+                    as a result of the use of any UGC posted, emailed, transmitted or otherwise made available on or
+                    through this Site. The UGC posted on or through this Site expresses the personal opinions of the
+                    individuals who posted it and does not necessarily reflect the views of BullsonWallstreet or any
+                    person or entity associated with BullsonWallstreet.
+                </p>
+                <p>
+                    The Bullish Channel may publish testimonials or descriptions of past and present performance but
+                    these results are NOT typical, are not indicative of future results or performance, and are not
+                    intended to be a representation, warranty or guarantee that similar results will be obtained by you.
+                </p>
+                <p>
+                    Your results may differ materially from those expressed or utilized by The Bullish Channel due to a
+                    number of factors. We do not track the typical results of our current or past students. As a
+                    provider of educational courses, we do not have access to the personal trading accounts or brokerage
+                    statements of our customers.
+                </p>
+                <p>
+                    Available research data suggests that most day traders are NOT profitable.
+                </p>
+                <p>
+                    Studies indicate at least 50% of aspiring day traders will not be profitable. This reiterates that
+                    consistently making money trading stocks is not easy. Day Trading is a high risk activity and can
+                    result in the loss of your entire investment. Any trade or investment is at your own risk.
+                </p>
+                <p>
+                    Any and all information discussed is for educational and informational purposes only and should not
+                    be considered tax, legal or investment advice. A referral to a stock or commodity is not an
+                    indication to buy or sell that stock or commodity.
+                </p>
+                <p>
+                    You agree to use this Site in a manner consistent with any and all applicable rules and regulations.
+                    You agree not to upload or transmit through this Site any computer viruses, trojan horses, worms or
+                    anything else designed to interfere with, interrupt or disrupt the normal operating procedures of a
+                    computer. Any unauthorized modification, tampering or change of any information, or any interference
+                    with the availability of or access to this Site is strictly prohibited.
+                </p>
+                <p>
+                    In addition, you are strictly prohibited from (1) recording the contents of any portion of the Site
+                    (including without limitation chat rooms, video or audio updates and screensharing sessions) by any
+                    means, including by video recording, for any purpose, and (2) disseminating such recordings to any
+                    person or entity. You agree that any violation of this provision will cause The Bullish Channel
+                    irreparable harm for which money damages are difficult to calculate. In the event that you violate
+                    this provision, you therefore consent to The Bullish Channel obtaining any injunctive or other
+                    equitable relief without the necessity of posting a bond to prevent further violations of this
+                    provision. We reserve all rights and remedies available to us.
+                </p>
+            </div>
+            &copy;2020 The Bullish Channel
+        </footer>
+    </div>
+</body>
+
 </html>

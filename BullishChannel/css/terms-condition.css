@@ -1,0 +1,32 @@
+.term {
+    margin: 0px 50px 150px 50px;
+    text-align: justify;
+}
+
+#main-title {
+    text-align: center;
+    padding: 150px 0px 150px 0px;
+    font-size: 100px;
+    font-weight: 900px;
+    letter-spacing: 20px;
+    background-size: cover;
+    background-image: url("../images/homepage.jpg");
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    #main-title {
+      padding: 10vh 0 10vh 0;
+      font-size: 14vw;
+      letter-spacing: 1vw;
+    }
+
+    h1{
+        font-size: 9vw;
+    }
+}

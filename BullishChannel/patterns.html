@@ -1,134 +1,367 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <link rel="stylesheet" href="css/patterns.css" type="text/css">
-        <meta name="description" content="Learn How To Start and Grow as a Trader">
-        <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
-        <meta name="author" content="Zheng">
-        <meta http-equiv="refresh" content="60">
-    </head>
- 
-    <body>
-        <header class="header">
-            <div class="navbar navbar-expand-md" id="navbar" >
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown">Education</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown">
-                                <a class="dropdown-item" href="education.html">Basic Information</a>
-                                <a class="dropdown-item" href="patterns.html">Patterns</a>
-                                <a class="dropdown-item" href="technicals.html">Technicals</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trade Records</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="chatroom.html">Chatroom</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="chatroom.html">About Us</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="signup.html">Signup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                    </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/patterns.css" type="text/css">
+    <link rel="stylesheet" href="css/uniform.css" type="text/css">
+    <meta name="description" content="Learn How To Start and Grow as a Trader">
+    <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
+    <meta name="author" content="Zheng">
+    <meta http-equiv="refresh" content="300">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+            <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+                            <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+                            <a class="dropdown-item" href="patterns.html">Patterns</a>
+                            <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="watchlist.html">Watchlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trader.html">Traders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="signup.html">Signup</a>
+                    </li>
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item logged-in">
+                        <a class="nav-link" id="sign-out" type="click">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="pattern">
+    <h1 id="main-title">Chart Patterns</h1>
+
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        Cup and Handle
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Cup & Handle</h3>
+                    <p>Strength: Bullish</p>
+                    <p>Shape: U-shaped formation (CUP) of the candles followed by a channel movement (HANDLE) in the
+                        candles
+                    </p>
+                    <p>Description: Cup and Handles reveals the shifts in supply and demand of a stock ticker– from
+                        excess
+                        supplies overwhelming the demands to demands overwhelming the supplies.</p>
+                    <p>Signal: A break above the channel indicates a buy signal</p>
+                    <img src="images/pattern-cup_and_handle.png">
                 </div>
             </div>
-        </header>
-
-        <h1 style="text-align: center; font-size: 40px; font-family: DejaVu Sans Mono; margin: 70px 0px 20px 0px;">Basic Chart Patterns</h1>
-
-        <div class="container">
-                <div class="content">
-                    <div class="columns">
-                            <div class="column">
-                                <h2 class="title">Pennant</h2>
-                            </div>
-                            <div class="column">
-                                <h2>Wedge</h2>
-                            </div>
-                    </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Double Top/Bottom
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Double Top</h3>
+                    <p>Strength: Bearish</p>
+                    <p>Shape: A linear constant resistance point where price gets rejected twice </p>
+                    <p>Description: Great selling pressure at the resistance point led by further drop in price</p>
+                    <p>Signal: A sell is indicated once after the second rejection of the resistance point and breaking
+                        the
+                        support area
+                        <img src="images/pattern-double_top.png">
+                    <h3>Double Bottom</h3>
+                    <p>Strength: Bullish</p>
+                    <p>Shape: A linear constant support point where price bounces off twice </p>
+                    <p>Description: Great buying pressure at the support point led by further rises in price</p>
+                    <p>Signal: A buy is indicated once after the second bounce off of the support point and breaking the
+                        resistance area
+                        <img src="images/pattern-double_bottom.JPG">
                 </div>
+            </div>
         </div>
-
-        <div class="container">
-                <div class="content">
-                    <div class="columns">
-                            <div class="column">
-                                <h2 class="title">Flag</h2>
-                            </div>
-                            <div class="column">
-                                <h2>Triangle</h2>
-                            </div>
-                    </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Flag
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Bull Flag</h1>
+                        <p>Strength: Bullish</p>
+                        <p>Shape: A sharp rise in candle(s) (POLE) followed by a small consolidation period (FLAG)</p>
+                        <p>Description: Bullish Flag Formation reveals a surge of demands, outweighing the supplies,
+                            followed by a period in which supplies and demands are almost at a equilibrium.</p>
+                        <p>Signal: A break above the FLAG indicates a buy signal</p>
+                        <img src="images/pattern-flag.png">
+                        <h3>Bear Flag</h1>
+                            <p>Strength: Bear</p>
+                            <p>Shape: A sharp decline in candle(s) (POLE) followed by a small consolidation period
+                                (FLAG)
+                            </p>
+                            <p>Description: Bearish Flag Formation reveals a surge of supplies, outweighing the demands,
+                                followed by a period in
+                                which supplies and demands are almost at a equilibrium.</p>
+                            <p>Signal: A break below the FLAG indicates a sell signal</p>
+                            <img src="images/pattern-bear_flag.png">
                 </div>
+            </div>
         </div>
-
-        <div class="container">
-                <div class="content">
-                    <div class="columns">
-                            <div class="column">
-                                <h2 class="title">Cup and Handle</h2>
-                            </div>
-                            <div class="column">
-                                <h2>Head and Shoulder</h2>
-                            </div>
-                    </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Head and Shoulders
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Head & Shoulders Pattern</h3>
+                    <p>Strength: Bearish</p>
+                    <p>Shape: Price in an uptrend:
+                        <br>
+                        1) gets rejected by the first major layer of resistance
+                        <br>
+                        2) Bouncing off support area, breaks above the first resistance (SHOULDER). Price gets rejected
+                        off
+                        of the second resistance point (HEAD).
+                        <br>
+                        3) Price falling back and again bouncing off of support level, retest the first resistance point
+                        (SHOULDER) and fails to break. Price falls back to support level and breaks support to start a
+                        downtrend</p>
+                    <p>Description: Reversal pattern in which price in an uptrend with support zone fails to break
+                        through
+                        the layers of resistance. Ultimately, the price falls below the support area and continues to
+                        descend</p>
+                    <p>Signal: Sell signal is generated after the last break of the support area</p>
+                    <img src="images/pattern-head_and_shoulders.JPG">
+                    <h3>Inverse Head & Shoulders Pattern</h3>
+                    <p>Strength: Bullish</p>
+                    <p>Shape: Price in an downtrend:
+                        <br>
+                        1) gets bounces off the first major layer of support
+                        <br>
+                        2) Rejected from the resistance mark, breaks below the first support (INVERSE SHOULDER). Price
+                        bounces off of the second
+                        support point (INVERSE HEAD).
+                        <br>
+                        3) Price falling back and again rejected by the resistance level, retest the first support point
+                        (INVERSE SHOULDER) and
+                        fails to break. Price falls back to resistance level and breaks resistance to start a uptrend
+                    </p>
+                    <p>Description: Reversal pattern in which price in an downtrend with resistance zone fails to break
+                        through the layers of
+                        support. Ultimately, the price rises above the resistance area and continues to ascend</p>
+                    <p>Signal: Sell signal is generated after the last break of the support area</p>
+                    <img src="images/pattern-inverse_head_and_shoulders.png">
                 </div>
+            </div>
         </div>
-
-        <div class="container">
-                <div class="content">
-                    <div class="columns">
-                            <div class="column">
-                                <h2 class="title">Double Top</h2>
-                            </div>
-                            <div class="column">
-                                <h2>Double Bottom</h2>
-                            </div>
-                    </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Pennant
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Pennant</h3>
+                    <p>Strength: Bullish and Bearish</p>
+                    <p>Shape: Support and Resistance level converges at the same rate</p>
+                    <p>Description: Decreasing resistance level showing increasing selling pressure with increasing
+                        resistance level showing increasing buying pressure. These two will eventually converge.</p>
+                    <p>Signal: A break above the pennant indicates a buy signal. A break below the pennant indicates a
+                        sell
+                        signal.</p>
+                    <img src="images/pattern-pennant.png">
                 </div>
+            </div>
         </div>
-
-        <div class="container">
-                <div class="content">
-                    <div class="columns">
-                            <div class="column">
-                                <h2 class="title">Channel</h2>
-                            </div>
-                            <div class="column">
-                                <h2>RSI</h2>
-                            </div>
-                    </div>
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Rectangle
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Rectangle</h3>
+                    <p>Strength: Bullish & Bearish</p>
+                    <p>Shape: Side-way channel (RECTANGLE) of the candles</p>
+                    <p>Description: Rectangle reveals the equilibrium of supplies and demand as one is not able to
+                        exceed
+                        another for a period of time.</p>
+                    <p>Signal: A break above the rectangle indicates a buy signal. A break below the rectangle indicates
+                        a
+                        sell signal.</p>
+                    <img src="images/pattern-rectangle.png">
                 </div>
+            </div>
         </div>
-    </body>
+        <div class="card">
+            <div class="card-header" id="headingSeven">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Triangle
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Ascending Triangle</h3>
+                    <p>Strength: Bullish</p>
+                    <p>Shape: Candles form a solid base at the top as resistance, while forming a linear increasing
+                        support
+                        level.</p>
+                    <p>Price pattern of candles rejecting a solid resistance zone shows a solid level of supplies
+                        overwhelmingthe demands,
+                        while the increasing support level shows the increasing demands over supplies. </p>
+                    <p>Signal: When the lines of support and resistance converges, it indicates a buy signal
+                    </p>
+                    <img src="images/pattern-ascending_triangle.png">
+                    <h3>Descending Triangle</h3>
+                    <p>Strength: Bearish</p>
+                    <p>Shape: Candles form a solid base at the bottom as support, while forming a linear decreasing
+                        resistance level.</p>
+                    <p>Price pattern of candles rejecting a solid support zone shows a solid level of demands
+                        overwhelmingthe supplies,
+                        while the decreasing support level shows the increasing supplies over demands. </p>
+                    <p>Signal: When the lines of support and resistance converges, it indicates a sell signal </p>
+                    <img src="images/pattern-descending_triangle.png">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingEight">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Triple Top/Bottom
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Triple Top</h3>
+                    <p>Strength: Bearish</p>
+                    <p>Shape: A linear constant resistance point where price gets rejected three times</p>
+                    <p>Description: Immense selling pressure at the resistance point led by further drop in price</p>
+                    <p>Signal: A sell is indicated once after the third rejection of the resistance point and breaking
+                        the
+                        support area</p>
+                    <img src="images/pattern-triple_top.png">
+                    <h3>Triple Bottom</h3>
+                    <p>Strength: Bullish</p>
+                    <p>Shape: A linear constant support point where price bounces three times</p>
+                    <p>Description: Immense buying pressure at the support mark led by further rise in price</p>
+                    <p>Signal: A buy is indicated once after the third bounce off of the support point and breaking the
+                        resistance area</p>
+                    <img src="images/pattern-triple_bottom.JPG">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingNine">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        Wedge
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h3>Wedge</h3>
+                    <p>Strength: Bullish & Bearish</p>
+                    <p>Shape: Support and Resistance level converges at a different rate</p>
+                    <p>Description: Decreasing resistance level showing increasing selling pressure with increasing
+                        resistance level showing increasing
+                        buying pressure. These two will eventually converge and whichever one has the greater slope will
+                        determine the outlook.</p>
+                    <p>Signal: A break above the wedge indicates a buy signal. A break below the wedge indicates a sell
+                        signal.</p>
+                    <img src="images/pattern-wedge.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <footer class="footer" style="background: #E8E8E8;">
-        <div class="search" style=" background: #465d2c; height: 80px; border-radius: 40px; padding-left: 40%">
-            <input class="search-text" type="text" name="" placeholder="Type to Search" style="border-radius: 40px; float: left; outline: none; background-color: white; color: black; font-size: 16px; font-family: arial; line-height: 40px; margin-top:17px;">
-            <a class="search-button" href="#" style=" width: 45px; height: 45px; border-radius: 50%; display: flex;"><img style="border-radius: 50%;" src="images/search.jpg"/></a>
-        </div>
-    </footer>
+    <div class="flex-row">
+        <footer class="footer">
+            <div>
+                <div>
+                    <img src="images/bull.png" height="100px" />
+                </div>
+                <div class="row footer-link">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-condition.html">Terms and Conditions</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </div> 
+            </div>
+            &copy;2020 The Bullish Channel
+        </footer>
+    </div>
+</body>
+
 </html>

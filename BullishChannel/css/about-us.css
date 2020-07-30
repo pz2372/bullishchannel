@@ -1,11 +1,6 @@
-#main-color {
-    /* background-color: #333; */
-    width: 100%;
-  }
-  
-  #main {
+#main-title {
     text-align: center;
-    padding: 200px;
+    padding: 150px;
     font-size: 100px;
     font-weight: 900px;
     letter-spacing: 20px;
@@ -13,52 +8,18 @@
     background-image: url("../images/swimbear.jpg");
     color: transparent;
     -webkit-background-clip: text;
-  }
+}
   
-  .row-one {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    position: relative;
-  }
-  
-  .column-one {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .column-two {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .column-three {
-    flex: 1;
-    text-align: center;
-  }
-  
-  #person-one:hover {
-    cursor: pointer;
-  }
-  /* .column-one:visited {
-    background-color: red;
-  } */
-  
-  #person-two:hover {
-    cursor: pointer;
-  }
-  
-  #person-three:hover {
-    cursor: pointer;
-  }
-  
-  #person-one-name {
-    text-align: center;
-    margin: 100px;
-    padding-top: 30px;
-  }
-  
-  #person-info {
-    margin: 100px;
-  }
-  
+.mission {
+      margin: 0px 10vw 150px 10vw;
+      text-indent: 80px;
+      font-size: 2vh;
+}
+
+@media screen and (max-width: 700px) {
+    #main-title {
+      padding: 10vh 0 10vh 0;
+      font-size: 14vw;
+      letter-spacing: 1vw;
+    }
+}

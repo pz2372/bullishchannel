@@ -1,179 +1,252 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="css/performance.css" type="text/css" />
-    <link rel="stylesheet" href="css/uniform.css" type="text/css">
-    <meta name="description" content="Learn How To Start and Grow as a Trader"/>
-    <meta name="keywords" content="stocks, day, swing, trade, learn, candles" />
-    <meta name="author" content="Zheng" />
-    <meta http-equiv="refresh" content="60" />
-  </head>
 
-  <body>
-    <header class="header">
-        <div class="navbar navbar-expand-lg navbar-dark bg-dark mb-4" role="navigation" id="nav">
-            <a class="nav navbar-left" href="#"><img src="images/imag.jpg" height="40px"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="nav navbar-nav mr-auto" style="position: absolute; left: 50%; transform: translatex(-50%)">
-                      
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">Education</a>
-                          <div class="dropdown-content">
-                            <a href="#">Basic Information</a>
-                            <a href="#">Patterns</a>
-                            <a href="#">Technical Analysis</a>
-                          </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Trade Records</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="chatroom.html">Chatroom</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.html">Signup</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/trader.css" type="text/css">
+  <link rel="stylesheet" href="css/uniform.css" type="text/css">
+  <meta name="description" content="Learn How To Start and Grow as a Trader">
+  <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
+  <meta http-equiv="refresh" content="300">
+</head>
 
-    <div id="main-color">
-      <h1 id="main"><a id="main-bold">Performances</a></h1>
-    </div>
-    <!-- <div id="column">
-      <div id="row-one"> -->
-    <ul class="tilesWrap container">
-      <li>
-        <div class="row">
-          <div class="col" id="col-one">
-            <h4 id="img">
-              <img
-                id="person-one"
-                src="images/bears.jpg"
-                alt="Avatar"
-                style="width: 100px; height: 100px; border-radius: 50%;"
-              />
-            </h4>
-            <p class="person-info">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-            <button><a href="about-us.html"> Read more </a></button>
-          </div>
-          <div class="col" id="col-two">
-            <img
-              class="graph"
-              src="images/bear.jpg"
-              style="width: 200px; height: 200px;"
-            />
-          </div>
+<body onload="drawCharts()">
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+      <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+        <ul class="navbar-nav mx-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="education.html">Education</a>
+            <div class="dropdown-content">
+              <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+              <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+              <a class="dropdown-item" href="patterns.html">Patterns</a>
+              <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="watchlist.html">Watchlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trader.html">Traders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about-us.html">About Us</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+          <li class="nav-item logged-out">
+            <a class="nav-link" href="signup.html">Signup</a>
+          </li>
+          <li class="nav-item logged-out">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item logged-in">
+            <a class="nav-link" id="sign-out" type="click">Sign Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  
+  <div class="chartContainer">
+    <canvas id="lineChartBlueGreen" width="400px" height="300px"></canvas>
+  </div>
+  <script>
+    var results = [
+      {
+        date: "Jan 17",
+        visits: 234
+      },
+      {
+        date: "Feb 17",
+        visits: 345
+      },
+      {
+        date: "Mar 17",
+        visits: 321
+      },
+      {
+        date: "Apr 17",
+        visits: 412
+      },
+      {
+        date: "May 17",
+        visits: 435
+      },
+      {
+        date: "June 17",
+        visits: 543
+      },
+      {
+        date: "July 17",
+        visits: 567
+      },
+      {
+        date: "Aug 17",
+        visits: 480
+      }
+    ];
+
+    //this is the function to create the line chart
+    function drawLineChart(div_id, results, yColumn, yLabel, xAxes, firstColour, secondColour, thirdColour, fourthColour) {
+      var ctx = document.getElementById(div_id).getContext("2d");
+      var width = window.innerWidth || document.body.clientWidth;
+      var gradientStroke = ctx.createLinearGradient(0, 0, width, 0);
+      gradientStroke.addColorStop(0, firstColour);
+      gradientStroke.addColorStop(0.3, secondColour);
+      gradientStroke.addColorStop(0.6, thirdColour);
+      gradientStroke.addColorStop(1, fourthColour);
+
+      var labels = results.map(function (item) {
+        return item[xAxes];
+      });
+      var data = results.map(function (item) {
+        return item[yColumn];
+      });
+
+      var myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: yLabel,
+              borderColor: gradientStroke,
+              pointBorderColor: gradientStroke,
+              pointBackgroundColor: gradientStroke,
+              pointHoverBackgroundColor: gradientStroke,
+              pointHoverBorderColor: gradientStroke,
+              pointBorderWidth: 8,
+              pointHoverRadius: 8,
+              pointHoverBorderWidth: 1,
+              pointRadius: 3,
+              fill: false,
+              borderWidth: 4,
+              data: data
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          legend: {
+            position: "none"
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  fontFamily: "Roboto Mono",
+                  fontColor: "#556F7B",
+                  fontStyle: "bold",
+                  beginAtZero: true,
+                  maxTicksLimit: 5,
+                  padding: 20
+                },
+                gridLines: {
+                  drawTicks: false,
+                  display: false,
+                  drawBorder: false
+                }
+              }
+            ],
+            xAxes: [
+              {
+                gridLines: {
+                  zeroLineColor: "transparent"
+                },
+                ticks: {
+                  padding: 20,
+                  fontColor: "#556F7B",
+                  fontStyle: "bold",
+                  fontFamily: "Roboto Mono"
+                },
+                gridLines: {
+                  drawTicks: false,
+                  display: false,
+                  drawBorder: false
+                }
+              }
+            ]
+          }
+        }
+      });
+    }
+
+
+    //this is to initialise the charts
+    function drawCharts() {
+      drawLineChart(
+        "lineChartBlueGreen",
+        results,
+        "visits",
+        "Number of visits",
+        "date",
+        "#7C4DFF",
+        "#448AFF",
+        "#00BCD4",
+        "#1DE9B6"
+      );
+      drawLineChart(
+        "lineChartPinkOrange",
+        results,
+        "visits",
+        "Number of visits",
+        "date",
+        "#F44336",
+        "#F50057",
+        "#FF4081",
+        "#FF9100"
+      );
+    }
+  </script>
+
+
+  <script src="script/core.js"></script>
+  <script src="script/data.js"></script>
+  <script src="script/trader.js"></script>
+
+  <div class="flex-row">
+    <footer class="footer">
+      <div>
+        <div>
+          <img src="images/bull.png" height="100px" />
         </div>
-      </li>
-      <li>
-        <div class="row">
-          <div class="col" id="col-one">
-            <h4 id="img">
-              <img
-                id="person-one"
-                src="images/bears.jpg"
-                alt="Avatar"
-                style="width: 100px; height: 100px; border-radius: 50%;"
-              />
-            </h4>
-            <p class="person-info">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-            <button><a href="about-us.html"> Read more </a></button>
-          </div>
-          <div class="col" id="col-two">
-            <img
-              class="graph"
-              src="images/bear.jpg"
-              style="width: 200px; height: 200px;"
-            />
-          </div>
+        <div class="row footer-link">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="terms-condition.html">Terms and Conditions</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+          </ul>
         </div>
-      </li>
-      <li>
-        <div class="row">
-          <div class="col" id="col-one">
-            <h4 id="img">
-              <img
-                id="person-one"
-                src="images/bears.jpg"
-                alt="Avatar"
-                style="width: 100px; height: 100px; border-radius: 50%;"
-              />
-            </h4>
-            <p class="person-info">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-            <button><a href="about-us.html"> Read more </a></button>
-          </div>
-          <div class="col" id="col-two">
-            <img
-              class="graph"
-              src="images/bear.jpg"
-              style="width: 200px; height: 200px;"
-            />
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="row">
-          <div class="col" id="col-one">
-            <h4 id="img">
-              <img
-                id="person-one"
-                src="images/bears.jpg"
-                alt="Avatar"
-                style="width: 100px; height: 100px; border-radius: 50%;"
-              />
-            </h4>
-            <p class="person-info">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-            <button><a href="about.html"> Read more </a></button>
-          </div>
-          <div class="col" id="col-two">
-            <img
-              class="graph"
-              src="images/bear.jpg"
-              style="width: 200px; height: 200px;"
-            />
-          </div>
-        </div>
-      </li>
-    </ul>
-    <!-- </div>
-    </div> -->
-  </body>
+      </div>
+      &copy;2020 The Bullish Channel
+    </footer>
+  </div>
+</body>
+
 </html>

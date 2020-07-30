@@ -1,67 +1,51 @@
-@import "compass/css3";
- @import url(https://fonts.googleapis.com/css?family=Lato:100,400);
-
- ul {
-    display: block;
-	 text-align: center;
-	 margin: 0 auto;
-	 padding: 0;
-	 width: 100%;
-	 min-width: 535px;
-
-	 background-color: #343e48;
-	 position: relative;
-	 box-shadow: 0 3px 8px rgba(0, 0, 0, .5);
+.pattern {
+  margin-bottom: 150px;
+}
+#main-title {
+  text-align: center;
+  padding: 150px;
+  font-size: 100px;
+  font-weight: 900px;
+  letter-spacing: 20px;
+  background-size: cover;
+  background-image: url("../images/swimbear.jpg");
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.mb-0 {
+  text-align: center;
+}
+.btn-link {
+  color: #5c5c5c;
+  margin: auto;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.btn-link:hover {
+  color: #252525;
+  text-decoration: none;
 }
 
- li {
-	 margin: 0 auto;
-	 display: inline-block;
-	 list-style: none;
-	 padding: 0;
+.btn-link:link {
+  text-decoration: none;
 }
- a {
-	 display: block;
-	 padding: 25px;
-	 text-transform: uppercase;
-	 position: relative;
-	 z-index: 2;
-	 text-shadow: 1px 0px rgba(0, 0, 0, .4);
-	 color: #686f77;
-	 letter-spacing: 0.2em;
-	 text-decoration: none;
-	 transition: color 200ms;
-	 transform-style: preserve-3d;
+.card {
+  text-align: center;
+  margin: 0px 10% 0px 10%;
 }
- a:hover {
-	 color: #343e48;
+.card-body {
+  color: #353535;
 }
- a:after {
-	 content: attr(data-title);
-	 position: absolute;
-	 display: block;
-	 text-shadow: none;
-	 top: 29%;
-	 left: 18px;
-	 padding: 5px 7px;
-	 color: transparent;
-	 background: #4795c3;
-	 transform-origin: 50% 0%;
-	 backface-visibility: hidden;
-	 transform: translate3d(0px, 105%, 0px) rotateX(-112deg);
-	 transform-style: preserve-3d;
-	 transition: all 200ms ease;
-	 z-index: -1;
+.accordion img {
+  display: block;
+  margin: auto;
+  width: 90%;
 }
- li:nth-child(2) a:after {
-	 background: #ecc64b;
-}
- li:nth-child(3) a:after {
-	 background: #0b9ea6;
-}
- li:nth-child(4) a:after {
-	 background: #f26667;
-}
- a:hover:after {
-	 transform: rotateX(0deg) translateZ(0px);
+
+@media only screen and (max-width: 600px) {
+  #main-title {
+    padding: 10vh 0 10vh 0;
+    font-size: 14vw;
+    letter-spacing: 1vw;
+  }
 }

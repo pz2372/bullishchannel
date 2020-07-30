@@ -1,0 +1,13 @@
+const profile = [{
+    id: 1,
+    name: "Uzumaki",
+    bio: "Hi, I am a graduate of UNC with a degree in computer science. I am a software engineer with many projects under my belt. I first got into trading my freshman year and have been trading ever since. My goal as a trader is to become achieve financial freedom. With this freedom, I wish to travel the world fulfill the activities on my bucket list. I look forward to learning more about you in our chatroom."
+}, {
+    id: 2,
+    name: "Crabie",
+    bio: "Hello. I am a graduate of UNC with a degree in computer science.  Before I started trading, the stock market industry was fairly foreign to me, but not completely.  My parents and relatives has previously gambled in the stock market with a fairly low success rate.  I began trading in the stock market when I turned the year of 18.  That year, I had limited to no knowledge of the market and was gambling blindly looking for an “overnight successes”. Additionally, I sought for a source of knowledge from other retail traders but often receive contradictory results.  These scale of misleading information is what inspired me to help establish The Bullish Channel, to assist traders of every level to become successful!  But aside from my aim in The Bullish Channel, I like to discuss why I started trading despite my parents lack of success and who even urged me to quit.  My ambition is simple.  Society has formed a hidden message that many fail to realize– to graduate from the many years of education only to find a 9-to-5 job.  This idea may satisfy the majority, but I seek a life more fulfilling– the acquisition of financial freedom.  Trading the stock market opens this door!"
+}, {
+    id: 3,
+    name: "Wolf",
+    bio: "What started as a hobby turned into my passion. As an undergraduate, I never knew what I want to do with my life and poured my energy into extracurriculars. From involvement in social organizations to weight lifting and creating content for youtube, I never found myself truly inspired until I came across trading. It was interesting to see how I could either earn or lose money in a matter of minutes and I quickly became passionate on a deeper level. Trading stocks has taught me to not base decisions on my emotions, to see every failure as another step closer to success and to never stop learning!! It hasn’t been an easy journey but anything worth having isn’t going to be easy. My journey has just started but my hope with this community is to inspire each of you to go after what you want in life. To never give up even when faced with the largest obstacles, especially those we face within."
+}]

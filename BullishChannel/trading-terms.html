@@ -1,175 +1,475 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <link rel="stylesheet" href="css/trading-terms.css" type="text/css">
-        <link rel="stylesheet" href="css/uniform.css" type="text/css">
-        <meta name="description" content="Learn How To Start and Grow as a Trader">
-        <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
-        <meta name="author" content="Zheng">
-        <meta http-equiv="refresh" content="60">
-    </head>
 
-    <body>
-        <header class="header">
-            <div> 
-                <h1 style="font-family: Optima; color: #465d2c; padding-top: 15px; padding-left: 15px;" class="title is-1">The Bullish Channel</h1> 
-            </div> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="css/trading-terms.css" type="text/css">
+    <link rel="stylesheet" href="css/uniform.css" type="text/css">
+    <meta name="description" content="Learn How To Start and Grow as a Trader">
+    <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
+    <meta name="author" content="Zheng">
+    <meta http-equiv="refresh" content="300">
+</head>
 
-            <div class="navbar navbar-expand-sm navbar-dark bg-dark mb-4" role="navigation">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                                <li class="dropdown-item"><a class="nav-link"  href="education.html">Education</a></li>
-                                <li class="dropdown-item"><a class="nav-link"  href="patterns.html">Patterns</a></li>
-                                <li class="dropdown-item"><a class="nav-link"  href="technicals.html">Technicals</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trade Records</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="chatroom.html">Chatroom</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="signup.html">Signup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                    </ul>
-                </div>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+            <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+                            <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+                            <a class="dropdown-item" href="patterns.html">Patterns</a>
+                            <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="watchlist.html">Watchlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trader.html">Traders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="signup.html">Signup</a>
+                    </li>
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item logged-in">
+                        <a class="nav-link" id="sign-out" type="click">Sign Out</a>
+                    </li>
+                </ul>
             </div>
-        </header>
+        </nav>
+    </header>
 
-        <h1 style="text-align: center; font-size: 40px; font-family: DejaVu Sans Mono; margin: 70px 0px 20px 0px;">Common Trading Terminology</h1>
+    <div class="terms">
+    <h1 id="main-title">Common
+        Trading Terminology</h1>
 
-        <div id="outer-container">
+    <div id="outer-container">
         <div class="container" id="main">
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     ASK
                 </div>
-                <div class="col-md-auto">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia voluptate eaque, veniam maiores porro aspernatur recusandae incidunt, neque doloremque veritatis molestias, quas reprehenderit error! Recusandae in vero ea voluptas sequi tenetur natus sunt error inventore non voluptatum omnis ipsa magnam deserunt dolores, illo incidunt minus, autem quidem perspiciatis! Blanditiis, sapiente.
+                <div class="col-md">
+                    Limit sell orders on a particular ticker seen through Level 1 and Level 2 for retail traders.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     BID
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    Limit buy orders on a particular ticker seen through Level 1 and Level 2 for retail traders.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     BLUE CHIPS
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    Stocks typically above $5 with a large float and market caps. These stocks are characterized by
+                    slower movement in price actions (compared to penny stocks). Blue Chips stocks are generally more
+                    favorable to invest in than of penny stocks.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     COVER
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    Reference to short-selling in which to "buy back" the ticker that was once being shorted (borrowed
+                    to sell). In other words, to close out of the position of short-selling.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     DD
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    "Do your own DD (Due Dillengence)" is the act of conducting research instead of blindly following
+                    the "promising" words of others.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    DIVERGENCE
+                </div>
+                <div class="col-md">
+                    When two signals, usually technical indicators, start to move opposite of each other signifying a change in the stock.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    ETF
+                </div>
+                <div class="col-md">
+                    An exchange traded fund is a fund that is designed to follow a commodity, bond, or stock.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     FLOAT
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    Amount of shares sold for a particular stock. The lower in float of a particular stock, the more
+                    easily the stock can be manipulated or moved from a small amount of volume. Stocks with high float
+                    are generally difficult to be manipulated from such as a pump-and-dump. By taking the float
+                    multiplied by the current price, you get the market value of a particular ticker.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    FLOAT ROTATION
+                </div>
+                <div class="col-md">
+                    Float rotation is when a stock has a trading volume greater than the float.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    HARD TO BORROW
+                </div>
+                <div class="col-md">
+                    A hard to borrow is a stock that is difficult to short because the broker cannot locate enough shares to borrow.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    HEDGE
+                </div>
+                <div class="col-md">
+                    A hedge is a position that is held in order to counteract the original position.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    HFT
+                </div>
+                <div class="col-md">
+                    High frequency trading is trading that is done by algorithms.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    INSTITUTIONAL
+                </div>
+                <div class="col-md">
+                    A trader or organization that is part of a trading firm.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    IPO
+                </div>
+                <div class="col-md">
+                    IPO (Initial Public Offering) is a term coined for when a company first go public to be traded in
+                    the exchange. This allows investors and speculators alike to trade the company while providing
+                    working capitals for the company.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    LIQUIDITY
+                </div>
+                <div class="col-md">
+                    Liquidity is the ease of buying or selling a quantity of stock without heavily influencing the price.  High liqudity stocks generally has low spread and therefore easier to get in or out of a stock with ease.  Illiquid stocks generally has high spread and therefore difficult to take a position.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     LONG
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    Longs is the opposing force of shorts. Trader going long in a stock buys a stock with the intent on
+                    capitalizing profits from the advance in the stock value.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    MARGIN
+                </div>
+                <div class="col-md">
+                    Margin is borrowed money you can use on a trade on top of using your own cash as well.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    MARKET MAKER
+                </div>
+                <div class="col-md">
+                    Market Makers are in charge of matching the highest bids and lowest asks orders placed from the numerous brokerages.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    OFFERING
+                </div>
+                <div class="col-md">
+                    Offering (like a IPO) is a way of allowing the company to increase their assets for such as paying off debt or furthering their research by issuing more common stocks to the public.  The act of issuing more stocks causes dilution as each individual stocks represent a smaller portion of the overall market outstanding shares.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    OTC
+                </div>
+                <div class="col-md">
+                    OTC (Over the Counter) stocks are stocks that are not afiliated with an exchange. This is due to their small prices that do not meet exchange requirements.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    PDT
+                </div>
+                <div class="col-md">
+                    PDT (Pattern Day Trading) affects account size that are less than $25,000.  The accounts affected can only day-trade up to three times before being relieved of the restriction in 5 business days after placing each individual day-trades.  Account sizes above $25,000 are not affected by PDT and therefore can place as many day-trades as one like.  PDT was implemented to protect the public from dangerously day-trading and losing their whole account portfolio.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     PENNY STOCKS
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    Stock under $5. Usually characterized by violent movement in price actions with lower float than of
+                    blue chips.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    PR
+                </div>
+                <div class="col-md">
+                    PR (Press Release) is a public news catalyst for a company.  PR serves to gives speculators and investors an insight of the company– from their performances to their newest advancement in its products.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    PT
+                </div>
+                <div class="col-md">
+                    PT (Price Target) is the price range that one reach for when and before taking position in a stock.  PT is determined by many factors such as risk-reward ratios, percentage move, support and resistance, and etc.  PT varies from traders to traders and one should find a PT not only comfortable to themself, but also profitable.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    PUMP AND DUMP
+                </div>
+                <div class="col-md">
+                    A stock that is increased dramatically due to hype or press release and then drops dramatically after a loss in volume.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    RETAIL
+                </div>
+                <div class="col-md">
+                    Retail traders are individuals that trade from home and do not work at a trading firm. 
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    REVERSE SPLIT
+                </div>
+                <div class="col-md">
+                    The opposite of Split.  Reverse split is the act of combining shares of stocks with the aim of temporarily increasing the price, having the side-effects of a lower float.  For example, a 1-for-10 Reverse Split on a stock trading at 1.00 per share will combine 10 shares for the price of 10.00 per share.  Reverse split are usually done by companies to comply to NASDAQ standards of maintaining their price above $1 or to interest investors by keeping their price above $5.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    RISK REWARD
+                </div>
+                <div class="col-md">
+                    Risk Reward (ratio) is important to keep in mind for continued profits in the stock market.  Risk reward is the act of knowing how much to risk on a trade and how much reward can be obtain from that trade.  Generally it is beneficial to aim for a greater than 1:1 risk reward ratio but if a trader has a high percentage of profits, then they can even go below the 1:1 ratio and still be a consistent trader.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    SCALP
+                </div>
+                <div class="col-md">
+                    Scalping is an advanced form a day-trading with the intent of trading many times per day and taking small profits that accumalates as the number of trades progresses.  This is done by quickly taking and closing out of a position from mere minutes to seconds from entry.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     SHORT
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    Selling a stock with the intent on capitalizing profits from decline in the stock value.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
-            <div class="row justify-content-md-center" id="row">
+            <div class="row justify-content-md" id="row">
                 <div class="col col-lg-2" id="terms">
                     SHORT SQUEEZE
                 </div>
-                <div class="col-md-auto">
-                    Variable width content
+                <div class="col-md">
+                    Short squeeze is the advance in price action occuring from the covering in masses of shorters. This usually occurs in stocks that are heavily shorted.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    SPLIT
+                </div>
+                <div class="col-md">
+                    The opposite of a reverse split.  Split is the act of dividing shares of stocks with the aim of temporarily decreasing the price, having the side-effects of a higher float. For example, a 10-for-1 Split on a stock trading at 200.00 per share will be divided into 10 shares for the price of 20.00 per share.  A company may file a split in order to increase the number of shares available.  This is done to reduce the stock price and allow more investors to buy the stock.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    SPREAD
+                </div>
+                <div class="col-md">
+                    The differences in price of the highest bid and the lowest ask on the level 1 and level 2.  Stocks with high spread may be difficult to trade as market order may not be ideal due to paying an immensely greater price than that of a limit order.  High spread indicates a stock that is illiquid and therefore difficult to buy or sell without influencing the price.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    SSR
+                </div>
+                <div class="col-md">
+                    Short sell restriction is a restriction placed on a stock that has fallen more than 10%. In order for the stock to be shorted, its last candle must be in an uptick.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    VOLATILITY
+                </div>
+                <div class="col-md">
+                    Volitility is the mathematical measurement of the speed of how fast or slow a stock moves.
+                </div>
+                <div class="col col-lg-2">
+                </div>
+            </div>
+            <div class="row justify-content-md" id="row">
+                <div class="col col-lg-2" id="terms">
+                    WHALES
+                </div>
+                <div class="col-md">
+                    The large institional traders that make huge orders on stocks.
                 </div>
                 <div class="col col-lg-2">
                 </div>
             </div>
         </div>
-        </div>
-    </body>
+    </div>
+</div>
+    <script src="about.js"></script>
 
-    <footer class="footer" style="background: #E8E8E8;">
-        <div class="search" style=" background: #465d2c; height: 80px; border-radius: 40px; padding-left: 40%">
-            <input class="search-text" type="text" name="" placeholder="Type to Search" style="border-radius: 40px; float: left; outline: none; background-color: white; color: black; font-size: 16px; font-family: arial; line-height: 40px; margin-top:17px;">
-            <a class="search-button" href="#" style=" width: 45px; height: 45px; border-radius: 50%; display: flex;"><img style="border-radius: 50%;" src="images/search.jpg"/></a>
-        </div>
-    </footer>
+    <div class="flex-row">
+        <footer class="footer">
+            <div>
+                <div>
+                    <img src="images/bull.png" height="100px" />
+                </div>
+                <div class="row footer-link">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-condition.html">Terms and Conditions</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            &copy;2020 The Bullish Channel
+        </footer>
+    </div>
+</div>
+</body>
+
 </html>

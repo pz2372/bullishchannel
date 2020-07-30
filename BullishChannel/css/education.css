@@ -1,176 +1,253 @@
+.education {
+  margin-bottom: 150px;
+}
 
-.candlehover {
-    position: absolute;
-    top: 320px;
-    left: 300px;
-    font-size: 28px;
-    cursor: pointer;
+#main-title {
+  text-align: center;
+  padding: 150px;
+  font-size: 100px;
+  font-weight: 900px;
+  letter-spacing: 20px;
+  background-size: cover;
+  background-image: url("../images/swimbear.jpg");
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#main-bold {
+  color: black;
+  background-position: fixed;
+}
+
+.tilesWrap {
+  padding: 0;
+  margin: 50px auto;
+  list-style: none;
+  text-align: center;
+}
+
+#col-one {
+  text-align: left;
+}
+
+#col-two {
+  text-align: center;
+}
+
+.tilesWrap li {
+  display: inline-block;
+  min-width: 95%;
+  padding: 50px 20px 50px;
+  position: relative;
+  vertical-align: top;
+  margin: 50px;
+  font-family: "helvetica", san-serif;
+  min-height: 25vh;
+  background: #262a2b;
+  border: 1px solid #252727;
+  text-align: left;
+}
+.tilesWrap .premium-content {
+  background: #123429;
+  border: 1px solid #123429;
+}
+.tilesWrap li h2 {
+  font-size: 114px;
+  margin: 0;
+  position: absolute;
+  opacity: 0.2;
+  top: 50px;
+  right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.col h4 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-left: 150px;
+  color: #70acaa;
+}
+.tilesWrap li h3 {
+  font-size: 20px;
+  color: #b7b7b7;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.tilesWrap li p {
+  font-size: 16px;
+  line-height: 18px;
+  color: #b7b7b7;
+  margin-top: 5px;
+  text-align: right;
+  margin-left: 100px;
+}
+
+.tilesWrap li button {
+  background: transparent;
+  border: 1px solid #b7b7b7;
+  padding: 10px 20px;
+  color: #b7b7b7;
+  border-radius: 3px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-40px);
+  opacity: 0;
+  cursor: pointer;
+  overflow: hidden;
+  float: right;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tilesWrap li button:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  background: #b7b7b7;
+  top: 0;
+  opacity: 0;
+  left: -140px;
+  border-radius: 0 20px 20px 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.tilesWrap li:hover button {
+  transform: translateY(5px);
+  opacity: 1;
+}
+.tilesWrap li button:hover {
+  color: #262a2b;
+}
+.tilesWrap li button:hover:before {
+  left: 0;
+  opacity: 1;
+}
+
+.tilesWrap li button a {
+  text-decoration: none;
+}
+
+.tilesWrap li:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: #fff;
+  transform: skew(2deg, 2deg);
+}
+.tilesWrap li:after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+.tilesWrap li:nth-child(1):before {
+  background: #c9ffbf;
+  background: -webkit-linear-gradient(to right, #ffafbd, #c9ffbf);
+  background: linear-gradient(to right, #ffafbd, #c9ffbf);
+}
+.tilesWrap li:nth-child(2):before {
+  background: #f2709c;
+  background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+  background: linear-gradient(to right, #ff9472, #f2709c);
+}
+.tilesWrap li:nth-child(3):before {
+  background: #c21500;
+  background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+  background: linear-gradient(to right, #ffc500, #c21500);
+}
+.tilesWrap li:nth-child(4):before {
+  background: #fc354c;
+  background: -webkit-linear-gradient(to right, #0abfbc, #fc354c);
+  background: linear-gradient(to right, #0abfbc, #fc354c);
+}
+#premium-title {
+  font-size: 50px;
+  color: #123429;
+  margin: 200px 0px 200px 0px;
+}
+.tilesWrap li:nth-child(5):before {
+  background: #6517b4;
+  background: -webkit-linear-gradient(to right, #7dadac, #6517b4);
+  background: linear-gradient(to right, #7dadac, #6517b4);
+}
+#blur {
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
+}
+.tilesWrap li:nth-child(6):before {
+  background: #a4535d;
+  background: -webkit-linear-gradient(to right, #62ad52, #a4535d);
+  background: linear-gradient(to right, #62ad52, #a4535d);
+  cursor: none;
+}
+.tilesWrap li:nth-child(7):before {
+  background: #b3c854;
+  background: -webkit-linear-gradient(to right, #b967ae, #b3c854);
+  background: linear-gradient(to right, #b967ae, #b3c854);
+}
+.tilesWrap li:nth-child(8):before {
+  background: #668585;
+  background: -webkit-linear-gradient(to right, #cc3cc7, #668585);
+  background: linear-gradient(to right, #cc3cc7, #668585);
+}
+.tilesWrap li:nth-child(9):before {
+  background: #5d8464;
+  background: -webkit-linear-gradient(to right, #c1895b, #5d8464);
+  background: linear-gradient(to right, #c1895b, #5d8464);
+}
+.tilesWrap li:nth-child(10):before {
+  background: #432b2d;
+  background: -webkit-linear-gradient(to right, #5c4798, #432b2d);
+  background: linear-gradient(to right, #5c4798, #432b2d);
+}
+.tilesWrap li:nth-child(11):before {
+  background: #b5d71c;
+  background: -webkit-linear-gradient(to right, #12d7d4, #b5d71c);
+  background: linear-gradient(to right, #12d7d4, #b5d71c);
+}
+
+@media only screen and (max-width: 600px) {
+  #main-title {
+    padding: 10vh 0 10vh 0;
+    font-size: 14vw;
+    letter-spacing: 1vw;
   }
-  .candlehover a {
-    display: none;
-    color: white;
+
+  .col h4 {
+    margin-left: 0;
   }
-  .candlehover:hover a {
+
+  li {
+    border: none;
+  }
+
+  .tilesWrap li {
+    margin: 5vh 0 5vh 0;
+  }
+
+  .tilesWrap li:before {
+    content: none;
+    position: none;
+  }
+
+  .tilesWrap li p {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .tilesWrap li button {
+    transition: none;
+    transform: none;
+    opacity: 1;
+    float: none;
     display: block;
-    position: relative;
-    background: #181818;
-    border-radius: .4em;
-
+    margin-bottom: 16px;
   }
-
-  .bidhover {
-    position: absolute;
-    top: 625px;
-    left: 300px;
-    font-size: 28px;
-    cursor: pointer;
-  }
-  .bidhover p {
-    display: none;
-    color: white;
-  }
-  .bidhover:hover p {
-    display: block;
-    position: relative;
-    background: #181818;
-    border-radius: .4em;
-  }
-
-  .askhover {
-    position: absolute;
-    top: 625px;
-    left: 700px;
-    font-size: 28px;
-    cursor: pointer;
-  }
-  .askhover p {
-    display: none;
-    color: white;
-  }
-  .askhover:hover p {
-    display: block;
-    position: relative;
-    background: #181818;
-    border-radius: .4em;
-  }
-
-  .bidsizehover {
-    position: absolute;
-    top: 625px;
-    left: 440px;
-    font-size: 28px;
-    cursor: pointer;
-  }
-  .bidsizehover p {
-    display: none;
-    color: white;
-  }
-  .bidsizehover:hover p {
-    display: block;
-    position: relative;
-    background: #181818;
-    border-radius: .4em;
-  }
-
-  .asksizehover {
-    position: absolute;
-    top: 625px;
-    left: 840px;
-    font-size: 28px;
-    cursor: pointer;
-  }
-  .asksizehover p {
-    display: none;
-    color: white;
-  }
-  .asksizehover:hover p {
-    display: block;
-    position: relative;
-    background: #181818;
-    border-radius: .4em;
-  }
-
-  .timehover {
-    position: absolute;
-    top: 300px;
-    left: 800px;
-    font-size: 28px;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  .timehover p {
-    display: none;
-    color: white;
-  }
-  .timehover:hover p {
-    display: block;
-    position: relative;
-    background: #181818;
-    border-radius: .4em;
-  }
-
-  .tickerhover {
-    position: absolute;
-    top: 208px;
-    left: 140px;
-    font-size: 28px;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  .tickerhover p {
-    display: none;
-    color: white;
-  }
-  .tickerhover:hover p {
-    display: block;
-    position: relative;
-    background: #181818;
-    border-radius: .4em;
-  }
-
-  .volumehover {
-    position: absolute;
-    top: 450px;
-    left: 200px;
-    font-size: 28px;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  .volumehover a {
-    display: none;
-    color: white;
-  }
-  .volumehover:hover a {
-    display: block;
-    position: relative;
-    background: #181818;
-    border-radius: .4em;
-  }
-
-  .toggle {
-    height: 15px;
-    width: 15px;
-    background-color: #A52A2A;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  h2 {
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 25px;
-    margin-left: 20px;
-  }
-
-  h3 {
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 15px;
-    margin-left: 30px;
-  }
-
-  p {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 10px
-  }
+}

@@ -1,6 +1,29 @@
+.terms {
+  margin-bottom: 150px;
+}
+
+#main-title {
+  text-align: center;
+  padding: 150px;
+  font-size: 100px;
+  font-weight: 900px;
+  letter-spacing: 20px;
+  background-size: cover;
+  background-image: url("../images/swimbear.jpg");
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#main {
+  font-size: 17px;
+  font-family: arial;
+  margin-bottom: 100px;
+}
+
 #outer-container {
-  background-color: black;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(46, 46, 46);
+  margin-left: 70px;
 }
 
 #row {
@@ -18,9 +41,24 @@
   padding-right: 12px;
   font-variant-numeric: tabular-nums;
   align-self: flex-start;
-
-  background-image: linear-gradient(to bottom, aquamarine, orangered);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(6, 184, 124),
+    rgb(199, 81, 38)
+  );
   background-attachment: fixed;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  #main-title {
+    padding: 10vh 0 10vh 0;
+    font-size: 14vw;
+    letter-spacing: 1vw;
+  }
+
+  #outer-container {
+    margin: 0 8vw 0 8vw;
+  }
 }

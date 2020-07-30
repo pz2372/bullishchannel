@@ -1,0 +1,81 @@
+.watchlist {
+  margin-bottom: 250px;
+  text-align: center;
+}
+
+#main-title {
+  text-align: center;
+  padding: 150px;
+  font-size: 100px;
+  font-weight: 900px;
+  letter-spacing: 20px;
+  background-size: cover;
+  background-image: url("../images/dark.jpeg");
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.flex {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+#flex-one {
+  flex: 50%;
+  padding-right: 50px;
+}
+
+#flex-two {
+  flex: 50%;
+  padding-left: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  background-color: #505050;
+  padding: 1px;
+}
+
+.item {
+  margin: 1px;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  background-color: #272727;
+  color: rgb(218, 218, 218);
+  font-size: 35px;
+}
+
+.color-two {
+  background-color: #f7f7f7;
+  font-size: 2vh;
+}
+
+@media screen and (max-width: 700px) {
+    #main-title {
+      padding: 10vh 0 10vh 0;
+      font-size: 14vw;
+      letter-spacing: 1vw;
+    }
+
+  .flex {
+    flex-direction: column;
+  }
+  #flex-one {
+    padding-right: 0px;
+    margin-bottom: 50px;
+  }
+  #flex-two {
+    padding-left: 0px;
+    margin-top: 50px;
+  }
+
+  .title {
+    font-size: 7vw;
+  }
+}

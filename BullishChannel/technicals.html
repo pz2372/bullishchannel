@@ -1,114 +1,219 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <link rel="stylesheet" href="css/technicals.css" type="text/css">
-        <link rel="stylesheet" href="css/uniform.css" type="text/css">
-        <meta name="description" content="Learn How To Start and Grow as a Trader">
-        <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
-        <meta name="author" content="Zheng">
-        <meta http-equiv="refresh" content="60">
-    </head>
 
-    <body>
-        <header class="header">
-            <div> 
-                <h1 style="font-family: Optima; color: #465d2c; padding-top: 15px; padding-left: 15px;" class="title is-1">The Bullish Channel</h1> 
-            </div> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="css/technicals.css" type="text/css">
+    <link rel="stylesheet" href="css/uniform.css" type="text/css">
+    <meta name="description" content="Learn How To Start and Grow as a Trader">
+    <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
+    <meta name="author" content="Zheng">
+    <meta http-equiv="refresh" content="300">
+</head>
 
-            <div class="navbar navbar-expand-sm navbar-dark bg-dark mb-4" role="navigation">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                                <li class="dropdown-item"><a class="nav-link"  href="education.html">Education</a></li>
-                                <li class="dropdown-item"><a class="nav-link"  href="patterns.html">Patterns</a></li>
-                                <li class="dropdown-item"><a class="nav-link"  href="technicals.html">Technicals</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trade Records</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="chatroom.html">Chatroom</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="signup.html">Signup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+            <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+                            <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+                            <a class="dropdown-item" href="patterns.html">Patterns</a>
+                            <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="watchlist.html">Watchlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trader.html">Traders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="signup.html">Signup</a>
+                    </li>
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item logged-in">
+                        <a class="nav-link" id="sign-out" type="click">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="tech">
+        <h1 id="main-title">
+            Popular Technical Indicators</h1>
+
+        <div id="column">
+
+            <div class="row">
+                <h1>EMA</h1>
+                <p>EMA (short for Exponentially Moving Average) is a moving average indicator that put more weights on
+                    the
+                    most
+                    recent
+                    candles. This in short means that the EMA are more responsive to recent changes in price actions
+                    than
+                    compared to SMA
+                    (Simple Moving Average). A practical use of the EMA is the popular trios of 8-9 EMA, 13EMA, and
+                    20EMA.
+                    These
+                    short-period EMAs are to act as support or resistance zone as we expect price to bounce off of these
+                    points.
+                </p>
+            </div>
+            <div class="row">
+                <img src="images/technicals-ema.png" alt="market charts" />
+            </div>
+
+            <div class="row">
+                <img src="images/technicals-sma.png" alt="market charts" />
+            </div>
+            <div class="row">
+                <h1>SMA</h1>
+                <p>SMA (short for Simple Moving Average) is a moving average indicator that when calculated equally
+                    weighs
+                    each
+                    of the
+                    (closing) candles– averaging them to form an average line. A practical use of the SMA is the 50-SMA
+                    on
+                    the
+                    daily chart
+                    to show the bullishness (if price is above the 50-SMA) or bearishness (if price is below the 50-SMA)
+                    of
+                    the
+                    current
+                    trend of a stock. </p>
+            </div>
+
+            <div class="row">
+                <h1>VWAP</h1>
+                <p>VWAP (short for Volume Weighted Average Price) is a trend indicator. This unique indicators combines
+                    both
+                    the
+                    price
+                    action and volume towards calculation. VWAP is popularly used in intrday-trading in determining its
+                    trend
+                    (price above
+                    VWAP indicates bullishness and vice-versa). VWAP also acts like a magnet– price generally attracts
+                    back
+                    to
+                    the VWAP
+                    level.</p>
+            </div>
+            <div class="row">
+                <img src="images/technicals-vwap.png" alt="market charts" />
+            </div>
+
+            <div class="row">
+                <img src="images/technicals-macd.png" alt="market charts" />
+            </div>
+            <div class="row">
+                <h1>MACD</h1>
+                <p>Trend-following momentum indicator. MACD line is calculated by subtracting the 26-period EMA
+                    (Exponential
+                    Moving
+                    Average) from the 12-EMA. The signal line is calculated by taking the 9-EMA. The intersection of the
+                    converging of these
+                    two lines can generate buy (MACD line crosses the Signal line from below) or sell signals (MACD line
+                    crosses
+                    the Signal
+                    line from above).</p>
+            </div>
+            <div class="row">
+                <h1>Momentum</h1>
+                <p>Monument indicator measures the speed of price fluctuations. To derive the calculation, take the
+                    latest
+                    price
+                    subtracted
+                    by the closing price of x number of days ago. This indicator can be used to show strengths or
+                    weaknesses
+                    within a stock
+                    to predict the most probable further price actions.</p>
+            </div>
+            <div class="row">
+                <img src="images/technicals-momentum.png" alt="market charts" />
+            </div>
+
+            <div class="row">
+                <img src="images/technicals-rsi.png" alt="market charts" />
+            </div>
+            <div class="row">
+                <h1>RSI</h1>
+                <p>A momentum indicator. RSI is an oscillator with 2 extreme points. The extreme of 30 indicates areas
+                    of
+                    oversold level.
+                    This oversold level is popularly represented as the area of undervalued price range. The opposite
+                    extreme of
+                    70
+                    indicates areas of overbought level. This overbought level is popularly represented as the area of
+                    overvalued price
+                    range. </p>
+            </div>
+            <div class="row">
+                <h1>Vortex</h1>
+                <p>Trend indicator. The vortex indicator is represented by 2 lines– VI+ and VI-. When the VI+ is above
+                    the
+                    VI-
+                    line, the
+                    trend is said to be bullish, while vice-versa. The crossing of these lines represent the change in
+                    the
+                    current trend.</p>
+            </div>
+            <div class="row">
+                <img src="images/technicals-vortex.png" alt="market charts" />
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="flex-row">
+        <footer class="footer">
+            <div>
+                <div>
+                    <img src="images/bull.png" height="100px" />
+                </div>
+                <div class="row footer-link">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-condition.html">Terms and Conditions</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
                     </ul>
                 </div>
             </div>
-        </header>
+            &copy;2020 The Bullish Channel
+        </footer>
+    </div>
+</body>
 
-        <h1 style="text-align: center; font-size: 40px; font-family: DejaVu Sans Mono; margin: 70px 0px 20px 0px;">Popular Technical Indicators</h1>
-
-        <div id=column>
-
-            <div id=row>
-                <h1>MACD</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt inventore accusantium doloribus animi molestiae eum placeat quasi minus consequatur. Quidem.</p>
-            </div>
-            <div id=row>
-                <img 
-                src="images/chart.png"
-                alt="market charts"
-                style="width: 300px; height: 200px;"
-                />
-            </div>
-
-            <div id=row>
-                <img src="images/chart.png" alt="market charts" style="width: 300px; height: 200px;" />
-            </div>
-                <div id=row>
-                <h1>MACD</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt inventore accusantium doloribus animi molestiae eum placeat quasi minus consequatur. Quidem.</p>
-            </div>
-
-            <div id=row>
-                <h1>MACD</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt inventore accusantium doloribus animi molestiae eum placeat quasi minus consequatur. Quidem.</p>
-            </div>
-            <div id=row>
-                <img 
-                src="images/chart.png"
-                alt="market charts"
-                style="width: 300px; height: 200px;"
-                />
-            </div>
-
-            <div id=row>
-                <img src="images/chart.png" alt="market charts" style="width: 300px; height: 200px;" />
-            </div>
-                <div id=row>
-                <h1>MACD</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt inventore accusantium doloribus animi molestiae eum placeat quasi minus consequatur. Quidem.</p>
-            </div>
-
-        </div>
-    </body>
-
-    <footer class="footer" style="background: #E8E8E8;">
-        <div class="search" style=" background: #465d2c; height: 80px; border-radius: 40px; padding-left: 40%">
-            <input class="search-text" type="text" name="" placeholder="Type to Search" style="border-radius: 40px; float: left; outline: none; background-color: white; color: black; font-size: 16px; font-family: arial; line-height: 40px; margin-top:17px;">
-            <a class="search-button" href="#" style=" width: 45px; height: 45px; border-radius: 50%; display: flex;"><img style="border-radius: 50%;" src="images/search.jpg"/></a>
-        </div>
-    </footer>
 </html>

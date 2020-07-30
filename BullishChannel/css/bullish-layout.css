@@ -1,69 +1,279 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 
-#image {
-  width: 100%;
-  height: 500px;
+#parallax {
+  max-width: 100%;
+  height: 50vh;
   background-image: url("../images/homepage.jpg");
+  background-attachment: fixed;
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
+  background-size: cover;
 }
 
 #image-content {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  text-shadow: 2px 2px 4px #000000;
+  width: 80%;
+  max-width: 100%;
 }
 
 #image-text {
-  padding-bottom: 50px;
+  max-width: 100%;
+  font-size: 8vw;
+  padding-bottom: 20px;
+  font-family: georgia;
 }
 
-#content {
-  background-color: gray;
-  overflow: hidden;
+#image-sub {
+  font-size: 3vw;
 }
 
-#center{
-  padding-top: 50px;
-  background-color: white;
+.first-section {
+  background-color: #F5F5F5;
+  padding-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-#center-info {
+.center-info {
   padding-top: 40px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
   text-align: center;
+}
+.center-info p {
+  text-align: center;
+}
+.center-info hr {
+  padding: 30px;
+}
+
+.foundation {
+  padding-bottom: 30px;
+}
+
+.home-img {
+  max-width: 50%;
+  padding-bottom: 10px;
+}
+
+.sub-list {
+  text-align: left;
+  padding-left: 100px;
+}
+
+.subscription {
+  padding-left: 5vw;
+  padding-bottom: 80px;
+}
+.subscription .col {
+  max-width: 50%
+}
+.subscription ul {
+  list-style-type: none;
+}
+
+#exampleModal {
+  text-align: left;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 5vw;
   font-family: DejaVu Sans Mono;
   font-weight: bold;
   text-align: center;
 }
 
-p {
+.winner {
   text-align: center;
+  padding: 9vw;
+  font-size: 3vw;
+  color: white;
+  background-color: black;
+}
+.winner h1{
+  font-size: 13vw;
+  color: rgb(0, 97, 0);
+}
+.winner a {
+  color: white;
 }
 
-.home-img {
-  max-width: 25%;
-  padding-bottom: 10px;
+#parallax-two {
+  padding: 5em;
+  max-width: 100%;
+  background-image: url("../images/dark.jpeg");
+  opacity: .8;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#second-section {
-  overflow: hidden;
+.second-section {
+  margin: 20px 0px 10px 0px;
+  padding: 50px 0px 50px 0px;
+  background-color: #353535;
 }
 
-#binary-image {
+.speech-bubble {
+  filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, .10)) drop-shadow(1px 2px 2px rgba(0, 0, 0, .15));
+  margin: 1rem;
+  padding: 40px;
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  background: #ffffff;
+  color: #353535;
+  width: 60%;
+  min-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.speech-bubble::before {
+  border: 12.5px solid transparent;
+  border-top: 12.5px solid white;
+  border-bottom: 0;
+  height: 0;
+  width: 0;
+  border-top-width: 25px;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 3rem;
+  bottom: -25px;
+  transform-origin: center;
+  margin-left: 20%;
+  transform: rotate(90deg) skew(-25deg) translateY(16.6666666667px);
+}
+
+small {
+  display: block;
+  margin-left: 40%;
+  left: 4.5rem;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.third-section{
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.text-block {
+  position: absolute;
+  background-color: #e2e2e2;
+  font-size: 25px;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.square-image {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.column {
+  float: left;
   max-width: 50%;
-  max-height: 50%;
-  float: right;
 }
 
-#third-section {
-  margin-top: 50px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #parallax {
+    height: 40vh;
+  }
+
+  #image-content {
+    top: 27%;
+    left: 50%;
+  }
+
+  #image-text {
+    font-size: 8vw;
+    padding-bottom: 20px;
+  }
+
+  #image-sub {
+    font-size: 4vw;
+  }
+
+  .first-section {
+    padding-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .center-info {
+    padding-top: 40px;
+    font-size: 1.5vh;
+  }
+  .center-info h4 {
+    font-size: 2.5vh;
+  }
+  .center-info .col {
+    max-width: 33%;
+  }
+
+  .subscription {
+    padding-left: 1vw;
+    padding-bottom: 3vh;
+    font-size: 1.5vh;
+  }
+  .subscription h2 {
+    font-size: 3vh;
+  }
+  .subscription .col {
+    max-width: 50%;
+  }
+
+  .sub-list {
+    padding-left: 2vw;
+  }
+
+
+.speech-bubble {
+  font-size: 4vw;
+  font-weight: bolder;
 }
 
+small {
+  display: block;
+  margin-left: 40%;
+  left: 4.5rem;
+  font-size: 4vh;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: white;
+  }
+
+.text-block {
+  font-size: 2vh;
+}
+
+}

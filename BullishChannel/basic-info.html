@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/basic-info.css" type="text/css">
+    <link rel="stylesheet" href="css/uniform.css" type="text/css">
+    <meta name="description" content="Learn How To Start and Grow as a Trader">
+    <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
+    <meta name="author" content="Zheng">
+    <meta http-equiv="refresh" content="300">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+            <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+                            <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+                            <a class="dropdown-item" href="patterns.html">Patterns</a>
+                            <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="watchlist.html">Watchlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trader.html">Traders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="signup.html">Signup</a>
+                    </li>
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item logged-in">
+                        <a class="nav-link" id="sign-out" type="click">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container basic">
+        <h1 id="main-title">Basic Information</h1>
+        <div class="section">
+            <h2>Candles</h2>
+            <p>
+                
+                The most widely used form of of expressing and understanding the market is through a
+                candlestick chart. <img id="candle-img" src="images/basic1.jpeg" />A candle is able to show a lot of imformation through a few lines and
+                a color. The candle is composed of a candle body and upper and lower wicks. The top of the top wick is
+                the highest price and the bottom wick is the lowest price that the stock reached within a time frame.
+                Each candle can be set to different time frames ranging from 1 minute to 1 month.
+                Every trader uses different time frames based on their preferences and experiences.
+                The color of the candle determines the opening and closing price of the stock:
+                
+            </p>
+
+            <p>
+                A green candle means that the opening price
+                is the bottom of the body and the closing price is the top of the body.
+            </p>
+            <img src="images/basic3.jpeg" />
+            <p>
+                A red candle means that the opening price
+                is the top of the body and the closing price is the bottom of the body.
+            </p>
+            <img src="images/basic2.jpeg" />
+        </div>
+
+        <div class="section candles">
+            <h2>Volume</h2>
+            <p>
+                The volume is the total amount of shares traded within a specific time frame. It represents
+                the number of buyers and sellers there are on a stock. Volume is one of the most important information
+                because it can tell a trader the liquidity of a stock. The more volume there is on a stock, the more 
+                traders there are, which increases the chance of the stock moving.
+            </p>
+            <img src="images/basic4.jpeg" />
+        </div>
+
+        <div class="section">
+            <h2>Support/Resistance</h2>
+            <h3>Support</h3>
+            <p>
+                Support is, in essence, a price area where large amounts of buyers come in the market.
+                If the price action bounces off the support area, the stock is considered bullish. If
+                the price action breaks through the support area, the stock is considered bearish.
+            </p>
+            <img src="images/basic5.jpeg" />
+
+            <h3>Resistance</h3>
+            <p>
+                Resistance is, in essence, a price area where sellers come in the market.
+                If the price action breaks through the resistance area, the stock is considered bullish.
+                If the price action gets rejected at the resistance area, the stock is considered bearish.
+            </p>
+            <img src="images/basic6.jpeg" />
+        </div>
+
+        <div class="section">
+            <h2>Order Types</h2>
+            <h3>Market Orders</h3>
+            <p>
+                Leverage of speed and filling the user’s buy order. The user risk paying a higher price than intended.
+                It is mostly
+                used by day traders to move in and out of stocks as quickly as possible.
+            </p>
+
+            <h3>Limit Orders</h3>
+            <p>
+                Leverage of buying at the price the user wants. The user risk not having their order filled as the stock
+                make higher moves.
+            </p>
+
+            <h3>Stop Market</h3>
+            <p>
+                Stop-loss is a more-advanced sell order type that triggers when the stock reach below the price
+                specified by the user. Once the
+                stop-loss triggers, the order automatically change into a “market sell” order that will trigger
+                immediately.
+                Stop-loss goes beyond than just an order type. Stop-loss is a method of managing risk to protect one’s
+                capital.
+                It is generally advised to have a stop-loss plan before acquiring position in a stock.
+                There are two ways to set up a stop-loss order: manually and mentally. Manual stop-loss is the process
+                of using the brokerage to set up the order type with the specified price for the stop-loss to trigger.
+                Mental stop-loss
+                is the process of watching the market to identify when price goes below the specified price and then use
+                the “market sell” order type.
+                The conflict with this order type is the user’s emotions and ego. With the greater emotions and ego
+                while trading, it blinds the user to not set the
+                stop-loss. This could result in some unforeseen losses.
+            </p>
+
+            <h3>Stop Limit</h3>
+            <p>
+                Once the
+                stop-loss triggers, the order automatically change into a “market sell” order that will trigger
+                immediately.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Analysis</h2>
+            <p>
+                Technical analysis is the use of charts, candlestick analysis, and special indicators to analyze stocks.
+                It differs from fundamental analysis since the user does not need to know any information about the
+                company of the stock. Patterns and technical indications are used to determine the entry point and exit
+                of a trade. This form of analysis is based on the notion that history tends to repeat itself inside the
+                market.
+                Technical indicators are mathematical instruments developed to help trader understand the candles
+                easier. Some
+                examples of common indicators can be found <a href="technicals.html">here</a>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Chart Patterns</h2>
+            <p>
+                Chart patterns are shapes and trends formed by the candles of a chart that are commonly used to
+                determine the movement of a stock.
+                Patterns may seem random but each pattern is backed by the price action and trends of its charts.
+                Patterns may be the first step
+                in determining a stock's direction but it is not guaranteed unless
+                it is backed up by other factors. This will be covered more
+                in the Premium Content. Some examples of common patterns can be found <a href="patterns.html">here</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex-row">
+        <footer class="footer">
+            <div>
+                <div>
+                    <img src="images/bull.png" height="100px" />
+                </div>
+                <div class="row footer-link">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-condition.html">Terms and Conditions</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            &copy;2020 The Bullish Channel
+        </footer>
+    </div>
+</body>
+</html>

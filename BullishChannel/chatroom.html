@@ -1,84 +1,188 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
-        <link rel="stylesheet" href="css/chatroom.css" type="text/css">
-        <link rel="stylesheet" href="css/uniform.css" type="text/css">
-        <meta name="description" content="Learn How To Start and Grow as a Trader">
-        <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
-        <meta name="author" content="Zheng">
-        <meta http-equiv="refresh" content="60">
-    </head>
 
-    <body>
-        <header class="header">
-            <div> 
-                <h1 style="font-family: Optima; color: #465d2c; padding-top: 15px; padding-left: 15px;" class="title is-1">The Bullish Channel</h1> 
-            </div> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+    <link rel="stylesheet" href="css/chatroom.css" type="text/css">
+    <link rel="stylesheet" href="css/uniform.css" type="text/css">
+    <meta name="description" content="Learn How To Start and Grow as a Trader">
+    <meta name="keywords" content="stocks, day, swing, trade, learn, candles">
+    <meta name="author" content="Zheng">
+    <meta http-equiv="refresh" content="300">
+</head>
 
-            <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation" id="nav">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                                <li class="dropdown-item"><a class="nav-link"  href="education.html">Education</a></li>
-                                <li class="dropdown-item"><a class="nav-link"  href="patterns.html">Patterns</a></li>
-                                <li class="dropdown-item"><a class="nav-link"  href="technicals.html">Technicals</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trade Records</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="chatroom.html">Chatroom</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="signup.html">Signup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                    </ul>
-                </div>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav mr-0" href="index.html"><img id="header-logo" src="images/bull.png" height="40px"></a>
+            <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse  align-items-center w-100" id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="basic-info.html">Basic Information</a>
+                            <a class="dropdown-item" href="trading-terms.html">Trading Terms</a>
+                            <a class="dropdown-item" href="patterns.html">Patterns</a>
+                            <a class="dropdown-item" href="technicals.html">Technical Analysis</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="watchlist.html">Watchlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trader.html">Traders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap" id="login-form">
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="signup.html">Signup</a>
+                    </li>
+                    <li class="nav-item logged-out">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item logged-in">
+                        <a class="nav-link" id="sign-out" type="click">Sign Out</a>
+                    </li>
+                </ul>
             </div>
-        </header>
-        
-        <div class="container rounded" id="chat">
-            <div class="row">
-                <div class="col-8">
-                    <div class="messages"></div>
-                    <form class="message-form" onsubmit="return false;">
-                        <input class="message-form__input form-control" placeholder="Type a message.." type="text"/>
-                        <button type="submit" class="btn btn-outline-success">Send</button>
-                        
-                    </form>
-                </div>
-                <div class="col-4">
-                    <div class="members-count">-</div>
-                    <div class="members-list">-</div>
-                </div>
+        </nav>
+    </header>
+
+    <div class="container rounded" id="chat">
+        <div class="row">
+            <div class="col-8">
+                <div class="messages"></div>
+                <form class="message-form" onsubmit="return false;">
+                    <input class="message-form__input form-control" placeholder="Type a message.." type="text" />
+                    <button type="submit" class="btn btn-outline-success">Send</button>
+
+                </form>
+            </div>
+            <div class="col-4">
+                <div class="members-count">-</div>
+                <div class="members-list">-</div>
             </div>
         </div>
+    </div>
 
-        <script src="./script/chatroom.js"></script>
-    </body>
+    <script src="./script/chatroom.js"></script>
+
+    <div class="flex-row">
+        <footer class="footer">
+            <div>
+                <div>
+                    <img src="images/bull.png" height="100px" />
+                </div>
+                <div class="row footer-link">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-condition.html">Terms and Conditions</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr />
+            <div id="disclaimer">
+                <p>
+                    The Site is intended solely for Users who are eighteen (18) years of age or older. Any registration
+                    by, use of or access to the Site by anyone under 18 is unauthorized, unlicensed and in violation of
+                    these Terms of Use. By using the Site, you represent and warrant that you are 18 or older, and that
+                    you agree to and to abide by all of the terms and conditions of these Terms of Use.
+                </p>
+                <p>
+                    If you do not agree with any term of provision of our Terms and Conditions you should not use our
+                    Site, Services, Content or Information. Please be advised that your continued use of the Site,
+                    Services, Content, or Information provided shall indicate your consent and agreement to our Terms
+                    and Conditions.
+                </p>
+                <p>
+                    You understand that The Bullish Channel does not control, and is not responsible for, content
+                    created and posted to the Site by Users (“User-Generated Content” or “UGC”) posted on or through the
+                    Site. Under no circumstances will we be liable in any way for any User-Generated Content.
+                </p>
+                <p>
+                    This means that you, not The Bullish Channel, are entirely responsible for all UGC that you post and
+                    that you can be held personally liable for comments that are defamatory, obscene, or libelous, or
+                    that violate these Terms of Use, an obligation of confidentiality, or the rights of others. If any
+                    part of the UGC you post is not your original work, it is your responsibility to obtain any
+                    necessary permission to post it.
+                </p>
+                <p>
+                    Because we do not control the UGC posted on or through this Site, we cannot and do not warrant or
+                    guarantee the truthfulness, integrity, suitability, or quality of that UGC. You also agree and
+                    understand that by accessing this Site, you may encounter UGC that you may consider to be
+                    objectionable. We have no responsibility for any UGC, including without limitation any errors or
+                    omissions therein. We are not liable for any loss or damage of any kind you may claim was incurred
+                    as a result of the use of any UGC posted, emailed, transmitted or otherwise made available on or
+                    through this Site. The UGC posted on or through this Site expresses the personal opinions of the
+                    individuals who posted it and does not necessarily reflect the views of BullsonWallstreet or any
+                    person or entity associated with BullsonWallstreet.
+                </p>
+                <p>
+                    The Bullish Channel may publish testimonials or descriptions of past and present performance but
+                    these results are NOT typical, are not indicative of future results or performance, and are not
+                    intended to be a representation, warranty or guarantee that similar results will be obtained by you.
+                </p>
+                <p>
+                    Your results may differ materially from those expressed or utilized by The Bullish Channel due to a
+                    number of factors. We do not track the typical results of our current or past students. As a
+                    provider of educational courses, we do not have access to the personal trading accounts or brokerage
+                    statements of our customers.
+                </p>
+                <p>
+                    Available research data suggests that most day traders are NOT profitable.
+                </p>
+                <p>
+                    Studies indicate at least 50% of aspiring day traders will not be profitable. This reiterates that
+                    consistently making money trading stocks is not easy. Day Trading is a high risk activity and can
+                    result in the loss of your entire investment. Any trade or investment is at your own risk.
+                </p>
+                <p>
+                    Any and all information discussed is for educational and informational purposes only and should not
+                    be considered tax, legal or investment advice. A referral to a stock or commodity is not an
+                    indication to buy or sell that stock or commodity.
+                </p>
+                <p>
+                    You agree to use this Site in a manner consistent with any and all applicable rules and regulations.
+                    You agree not to upload or transmit through this Site any computer viruses, trojan horses, worms or
+                    anything else designed to interfere with, interrupt or disrupt the normal operating procedures of a
+                    computer. Any unauthorized modification, tampering or change of any information, or any interference
+                    with the availability of or access to this Site is strictly prohibited.
+                </p>
+                <p>
+                    In addition, you are strictly prohibited from (1) recording the contents of any portion of the Site
+                    (including without limitation chat rooms, video or audio updates and screensharing sessions) by any
+                    means, including by video recording, for any purpose, and (2) disseminating such recordings to any
+                    person or entity. You agree that any violation of this provision will cause The Bullish Channel
+                    irreparable harm for which money damages are difficult to calculate. In the event that you violate
+                    this provision, you therefore consent to The Bullish Channel obtaining any injunctive or other
+                    equitable relief without the necessity of posting a bond to prevent further violations of this
+                    provision. We reserve all rights and remedies available to us.
+                </p>
+            </div>
+            &copy;2020 The Bullish Channel
+        </footer>
+    </div>
+</body>
 
 </html>

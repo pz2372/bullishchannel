@@ -1,0 +1,79 @@
+#faq {
+  margin-bottom: 150px;
+}
+
+#main-title {
+  text-align: center;
+  padding: 150px;
+  font-size: 100px;
+  font-weight: 900px;
+  letter-spacing: 20px;
+  background-size: cover;
+  background-image: url("../images/swimbear.jpg");
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.flex {
+  display: flex;
+}
+
+#flex-one {
+  flex: 60%;
+}
+
+.btn-link {
+  color: rgb(37, 37, 37);
+  font-weight: bold;
+  font-size: 18px;
+  margin: auto;
+  text-decoration: none;
+  text-align: left;
+}
+.btn-link:hover {
+  color: #123429;
+  text-decoration: none;
+}
+.btn-link:link {
+  text-decoration: none;
+  color: red;
+}
+.card {
+  text-align: left;
+  margin: 0px 100px 30px 100px;
+  border: 1px;
+}
+.accordion > .card > .card-header {
+  margin-bottom: -2px;
+}
+.card-header {
+  background-color: transparent;
+}
+.card-body {
+  color: #253f3e;
+}
+#flex-two {
+  flex: 40%;
+}
+.ad {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  #main-title {
+    padding: 10vh 0 10vh 0;
+    font-size: 14vw;
+    letter-spacing: 1vw;
+  }
+
+  .flex {
+    display: block;
+  }
+
+  .card {
+    margin: 0px 0px 30px 0px;
+  }
+}

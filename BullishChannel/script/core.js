@@ -14,6 +14,7 @@ var firebaseConfig = {
   firebase.analytics();
 
 
+/**
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         setupUI(user);
@@ -22,7 +23,6 @@ firebase.auth().onAuthStateChanged(user => {
         setupUI();
     }
 })
-
 
 const loggedOut = document.querySelectorAll('.logged-out')
 const loggedIn = document.querySelectorAll('.logged-in')
@@ -48,3 +48,4 @@ signOut.addEventListener('click', (e) => {
         console.log("success");
     });
 });
+**/
